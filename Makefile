@@ -16,3 +16,8 @@ run/encode:
 .PHONY: run/decode
 run/decode:
 	go run ./cmd/decode-encode -decode
+
+## run: run pdf-ocr
+.PHONY: run/pdf-ocr
+run/pdf-ocr:
+	go run ./cmd/pdf-ocr
