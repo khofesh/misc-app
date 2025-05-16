@@ -15,3 +15,11 @@ output for encode: `output/encoded.txt`
 input for decode: `input/decode.txt`
 
 output for decode: `output/decoded.txt`
+
+## pdf-ocr
+
+requirements
+
+```shell
+sudo dnf install tesseract
+```
