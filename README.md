@@ -1,2 +1,1 @@
-# Miscelaneous apps for daily problems
-
+# Miscellaneous apps for daily problems
