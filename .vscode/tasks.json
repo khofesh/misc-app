@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "go test (debug)",
+      "type": "shell",
+      "command": "go",
+      "args": ["test", "-c", "-o", "${fileDirname}/__debug_bin"],
+      "options": {
+        "cwd": "${fileDirname}"
+      }
+    },
+    {
+      "label": "build debug html2md",
+      "type": "shell",
+      "command": "make",
+      "args": ["build/debug/html2md"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "build debug pdf-ocr",
+      "type": "shell",
+      "command": "make",
+      "args": ["build/debug/pdf-ocr"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "build debug decode-encode",
+      "type": "shell",
+      "command": "make",
+      "args": ["build/debug/decode-encode"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}

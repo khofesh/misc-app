@@ -21,3 +21,55 @@ run/decode:
 .PHONY: run/pdf-ocr
 run/pdf-ocr:
 	go run ./cmd/pdf-ocr
+
+# ==================================================================================== #
+# BUILD DEBUG
+# ==================================================================================== #
+
+## build/debug/html2md: build the api with debugging flags enabled
+.PHONY: build/debug/html2md
+build/debug/html2md:
+	@echo 'Building cmd/html2md...'
+	go build -gcflags=all="-N -l" -o=./bin/html2md-debug ./cmd/html2md
+
+## build/debug/decode-encode: build the api with debugging flags enabled
+.PHONY: build/debug/decode-encode
+build/debug/decode-encode:
+	@echo 'Building cmd/decode-encode...'
+	go build -gcflags=all="-N -l" -o=./bin/decode-encode-debug ./cmd/decode-encode
+
+## build/debug/pdf-ocr: build the api with debugging flags enabled
+.PHONY: build/debug/pdf-ocr
+build/debug/pdf-ocr:
+	@echo 'Building cmd/pdf-ocr...'
+	go build -gcflags=all="-N -l" -o=./bin/pdf-ocr-debug ./cmd/pdf-ocr
+
+# ==================================================================================== #
+# QUALITY CONTROL
+# ==================================================================================== #
+
+## audit: tidy dependencies and format, vet and test all code
+.PHONY: audit
+audit: tidy
+	@echo 'Formatting code...'
+	go fmt ./...
+	@echo 'Vetting code...'
+	go vet ./...
+	staticcheck ./...
+	@echo 'Running tests...'
+	go test -race -vet=off ./...
+
+## vendor: tidy and vendor dependencies
+.PHONY: vendor 
+vendor:
+	@echo 'Tidying and verifying module dependencies...'
+	go mod tidy 
+	go mod verify 
+	@echo 'Vendoring dependencies...'
+	go mod vendor
+
+.PHONY: tidy 
+tidy:
+	@echo 'Tidying and verifying module dependencies...'
+	go mod tidy 
+	go mod verify 
