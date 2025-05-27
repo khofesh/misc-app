@@ -22,6 +22,11 @@ run/decode:
 run/pdf-ocr:
 	go run ./cmd/pdf-ocr
 
+## run: run html2text
+.PHONY: run/html2text
+run/html2text:
+	go run ./cmd/html2text
+
 # ==================================================================================== #
 # BUILD DEBUG
 # ==================================================================================== #
@@ -43,6 +48,12 @@ build/debug/decode-encode:
 build/debug/pdf-ocr:
 	@echo 'Building cmd/pdf-ocr...'
 	go build -gcflags=all="-N -l" -o=./bin/pdf-ocr-debug ./cmd/pdf-ocr
+
+## build/debug/html2text: build the api with debugging flags enabled
+.PHONY: build/debug/html2text
+build/debug/html2text:
+	@echo 'Building cmd/html2text...'
+	go build -gcflags=all="-N -l" -o=./bin/html2text-debug ./cmd/html2text
 
 # ==================================================================================== #
 # QUALITY CONTROL

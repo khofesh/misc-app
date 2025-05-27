@@ -23,3 +23,7 @@ requirements
 ```shell
 sudo dnf install tesseract
 ```
+
+## html2text
+
+convert html `input/input.html` to markdown `output/html2text-result.txt`

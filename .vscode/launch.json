@@ -49,6 +49,17 @@
       "preLaunchTask": "build debug decode-encode" // see tasks.json
     },
     {
+      "name": "Debug html2text",
+      "type": "go",
+      "request": "launch",
+      "mode": "exec",
+      "program": "${workspaceFolder}/bin/html2text-debug",
+      "args": [""],
+      "env": {},
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build debug html2text" // see tasks.json
+    },
+    {
       "name": "Debug Package Test as root",
       "type": "go",
       "request": "launch",
