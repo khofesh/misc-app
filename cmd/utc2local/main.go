@@ -1,3 +1,11 @@
+/*
+convert UTC RFC339 format to several time zone
+
+how to:
+./utc2local -utc="2025-07-09T00:00:00Z"
+
+./utc2local -help
+*/
 package main
 
 import (
