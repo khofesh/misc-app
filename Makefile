@@ -27,6 +27,11 @@ run/pdf-ocr:
 run/html2text:
 	go run ./cmd/html2text
 
+## run: run utc2local
+.PHONY: run/utc2local
+run/utc2local:
+	go run ./cmd/utc2local -utc="2025-07-09T00:00:00Z"
+
 # ==================================================================================== #
 # BUILD DEBUG
 # ==================================================================================== #
@@ -54,6 +59,23 @@ build/debug/pdf-ocr:
 build/debug/html2text:
 	@echo 'Building cmd/html2text...'
 	go build -gcflags=all="-N -l" -o=./bin/html2text-debug ./cmd/html2text
+
+## build/debug/utc2local: build the api with debugging flags enabled
+.PHONY: build/debug/utc2local
+build/debug/utc2local:
+	@echo 'Building cmd/utc2local...'
+	go build -gcflags=all="-N -l" -o=./bin/utc2local-debug ./cmd/utc2local
+
+# ==================================================================================== #
+# BUILD 
+# ==================================================================================== #
+
+## build/utc2local: build the cmd/utc2local application
+.PHONY: build/utc2local
+build/utc2local:
+	@echo 'Building cmd/utc2local...'
+	go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/utc2local ./cmd/utc2local
+	GOOS=linux go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/linux/utc2local ./cmd/utc2local
 
 # ==================================================================================== #
 # QUALITY CONTROL
