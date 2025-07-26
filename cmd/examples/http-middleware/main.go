@@ -2,67 +2,69 @@
 package main
 
 import (
-	"log"
+	"log/slog"
 	"net/http"
+	"os"
 )
 
-func middlewareOne(next http.Handler) http.Handler {
+func serverHeader(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		log.Println(r.URL.Path, "executing middlewareOne")
+		w.Header().Set("Server", "Go")
 		next.ServeHTTP(w, r)
-		log.Println(r.URL.Path, "executing middlewareOne again")
 	})
 }
 
-func middlewareTwo(next http.Handler) http.Handler {
+func logRequest(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		log.Println(r.URL.Path, "executing middlewareTwo")
+		var (
+			ip     = r.RemoteAddr
+			method = r.Method
+			url    = r.URL.String()
+			proto  = r.Proto
+		)
+
+		userAttrs := slog.Group("user", "ip", ip)
+		requestAttrs := slog.Group("request", "method", method, "url", url, "proto", proto)
+
+		slog.Info("request received", userAttrs, requestAttrs)
 		next.ServeHTTP(w, r)
-		log.Println(r.URL.Path, "executing middlewareTwo again")
 	})
 }
 
-func middlewareThree(next http.Handler) http.Handler {
+func requireBasicAuthentication(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		log.Println(r.URL.Path, "executing middlewareThree")
+		validUsername := "admin"
+		validPassword := "secret"
+
+		username, password, ok := r.BasicAuth()
+		if !ok || username != validUsername || password != validPassword {
+			w.Header().Set("WWW-Authenticate", `Basic realm="protected"`)
+			http.Error(w, "401 Unauthorized", http.StatusUnauthorized)
+			return
+		}
+
 		next.ServeHTTP(w, r)
-		log.Println(r.URL.Path, "executing middlewareThree again")
 	})
 }
 
-func middlewareFour(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		log.Println(r.URL.Path, "executing middlewareFour")
-		next.ServeHTTP(w, r)
-		log.Println(r.URL.Path, "executing middlewareFour again")
-	})
+func home(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Welcome to the home page!"))
 }
 
-func middlewareFive(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		log.Println(r.URL.Path, "executing middlewareFive")
-		next.ServeHTTP(w, r)
-		log.Println(r.URL.Path, "executing middlewareFive again")
-	})
-}
-
-func fooHandler(w http.ResponseWriter, r *http.Request) {
-	log.Println(r.URL.Path, "executing fooHandler")
-	w.Write([]byte("foo"))
-}
-
-func barHandler(w http.ResponseWriter, r *http.Request) {
-	log.Println(r.URL.Path, "executing barHandler")
-	w.Write([]byte("bar"))
+func admin(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Admin dashboard - you are authenticated!"))
 }
 
 func main() {
 	mux := http.NewServeMux()
 
-	mux.Handle("GET /foo", middlewareThree(middlewareFour(http.HandlerFunc(fooHandler))))
-	mux.Handle("GET /bar", middlewareFour(middlewareFive(http.HandlerFunc(barHandler))))
+	mux.HandleFunc("GET /{$}", home)
+	mux.Handle("GET /admin", requireBasicAuthentication(http.HandlerFunc(admin)))
 
-	log.Print("listening on :3000...")
-	err := http.ListenAndServe(":3000", middlewareOne(middlewareTwo(mux)))
-	log.Fatal(err)
+	slog.Info("listening on :3000...")
+	err := http.ListenAndServe(":3000", serverHeader(logRequest(mux)))
+	if err != nil {
+		slog.Error(err.Error())
+		os.Exit(1)
+	}
 }
