@@ -16,21 +16,21 @@ func middlewareOne(next http.Handler) http.Handler {
 
 func fooHandler(w http.ResponseWriter, r *http.Request) {
 	log.Println(r.URL.Path, "executing fooHandler")
-	w.Write([]byte("ok"))
+	w.Write([]byte("foo"))
 }
 
 func barHandler(w http.ResponseWriter, r *http.Request) {
 	log.Println(r.URL.Path, "executing barHandler")
-	w.Write([]byte("ok"))
+	w.Write([]byte("bar"))
 }
 
 func main() {
 	mux := http.NewServeMux()
 
 	mux.Handle("GET /foo", http.HandlerFunc(fooHandler))
-	mux.Handle("GET /bar", middlewareOne(http.HandlerFunc(barHandler)))
+	mux.Handle("GET /bar", http.HandlerFunc(barHandler))
 
 	log.Print("listening on :3000...")
-	err := http.ListenAndServe(":3000", mux)
+	err := http.ListenAndServe(":3000", middlewareOne(mux))
 	log.Fatal(err)
 }
