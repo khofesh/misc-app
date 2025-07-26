@@ -32,6 +32,11 @@ run/html2text:
 run/utc2local:
 	go run ./cmd/utc2local -utc="2025-07-09T00:00:00Z"
 
+## run: run http-middleware
+.PHONY: run/http-middleware
+run/http-middleware:
+	go run ./cmd/examples/http-middleware
+
 # ==================================================================================== #
 # BUILD DEBUG
 # ==================================================================================== #
