@@ -1,4 +1,5 @@
 // https://www.alexedwards.net/blog/making-and-using-middleware
+// https://www.alexedwards.net/blog/organize-your-go-middleware-without-dependencies
 package main
 
 import (
