@@ -37,6 +37,11 @@ run/utc2local:
 run/http-middleware:
 	go run ./cmd/examples/http-middleware
 
+## run: run spinner
+.PHONY: run/spinner
+run/spinner:
+	go run ./cmd/spinner
+
 # ==================================================================================== #
 # BUILD DEBUG
 # ==================================================================================== #
