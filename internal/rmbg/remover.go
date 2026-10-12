@@ -123,19 +123,48 @@ func (r *Remover) initSession(path string, opts Options) error {
 }
 
 // createSession creates the tensors and the session, falling back to CPU when
-// the device is auto and CUDA is unavailable.
+// the device is auto and CUDA is unavailable (either at session creation or on
+// a warm-up run).
 func (r *Remover) createSession(path, inputName string, outNames []string, outShapes []ort.Shape, opts Options) (Device, *ort.AdvancedSession, error) {
 	wantCUDA := opts.Device == DeviceCUDA || opts.Device == DeviceAuto
 
 	dev, sess, err := r.trySession(path, inputName, outNames, outShapes, opts, wantCUDA)
-	if err == nil {
-		return dev, sess, nil
+	if err == nil && wantCUDA {
+		// Run once so a broken CUDA/cuDNN install fails here, at startup,
+		// instead of on the first image.
+		if werr := r.warmup(sess); werr != nil {
+			_ = sess.Destroy()
+			r.destroyBuffers()
+			sess = nil
+			err = fmt.Errorf("cuda is not usable: %w", werr)
+		}
 	}
-	if opts.Device == DeviceAuto && wantCUDA {
-		log.Warn().Err(err).Msg("cuda unavailable, falling back to cpu")
-		return r.trySession(path, inputName, outNames, outShapes, opts, false)
+	if err != nil {
+		if opts.Device == DeviceAuto && wantCUDA {
+			log.Warn().Err(err).Msg("cuda unavailable, falling back to cpu")
+			return r.trySession(path, inputName, outNames, outShapes, opts, false)
+		}
+		return "", nil, err
 	}
-	return "", nil, err
+	return dev, sess, nil
+}
+
+// warmup runs the model once on a zero tensor.
+func (r *Remover) warmup(sess *ort.AdvancedSession) error {
+	data := r.input.GetData()
+	for i := range data {
+		data[i] = 0
+	}
+	return sess.Run()
+}
+
+func (r *Remover) destroyBuffers() {
+	if r.input != nil {
+		_ = r.input.Destroy()
+		r.input = nil
+	}
+	destroyTensors(r.outputs)
+	r.outputs = nil
 }
 
 func (r *Remover) trySession(path, inputName string, outNames []string, outShapes []ort.Shape, opts Options, useCUDA bool) (Device, *ort.AdvancedSession, error) {
@@ -254,10 +283,7 @@ func (r *Remover) Close() error {
 	if r.session != nil {
 		err = r.session.Destroy()
 	}
-	if r.input != nil {
-		_ = r.input.Destroy()
-	}
-	destroyTensors(r.outputs)
+	r.destroyBuffers()
 	closeORT()
 	return err
 }

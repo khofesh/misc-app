@@ -104,3 +104,10 @@ The CUDA, cuDNN, and ONNX Runtime versions must match the release pinned in the
 Makefile (`ORT_VERSION`, `ORT_CUDA`). `-device auto` falls back to CPU with a
 warning when CUDA is unavailable; `-device cuda` fails with exit code 2 instead.
 
+If CUDA is selected but inference fails with
+`CUDNN_STATUS_SUBLIBRARY_VERSION_MISMATCH`, more than one cuDNN 9 release is
+visible and they are being mixed. Keep the loader and all `libcudnn_*.so.9`
+sublibraries from a single cuDNN release, with that directory **before** any
+other directory that ships its own cuDNN (for example an ArrayFire install):
+`LD_LIBRARY_PATH=/opt/cudnn/current/lib:/usr/local/cuda/lib64`.
+

@@ -25,7 +25,8 @@ const (
 //
 //  1. the explicit -ort-lib value
 //  2. the ONNXRUNTIME_LIB environment variable
-//  3. ./lib/libonnxruntime.so next to the binary
+//  3. ./lib/libonnxruntime.so next to the binary, then in the working directory
+//     (so `go run` and `make run/rmbg` work from the repo root)
 //  4. libonnxruntime.so on the system loader path
 func FindORTLib(explicit string) (string, error) {
 	if explicit != "" {
@@ -37,8 +38,11 @@ func FindORTLib(explicit string) (string, error) {
 	if env := os.Getenv("ONNXRUNTIME_LIB"); env != "" {
 		return env, nil
 	}
+	candidates := []string{filepath.Join("lib", "libonnxruntime.so")}
 	if exe, err := os.Executable(); err == nil {
-		p := filepath.Join(filepath.Dir(exe), "lib", "libonnxruntime.so")
+		candidates = append([]string{filepath.Join(filepath.Dir(exe), "lib", "libonnxruntime.so")}, candidates...)
+	}
+	for _, p := range candidates {
 		if _, err := os.Stat(p); err == nil {
 			return p, nil
 		}

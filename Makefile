@@ -45,7 +45,7 @@ run/spinner:
 ## run/rmbg: run rmbg on a sample image
 .PHONY: run/rmbg
 run/rmbg:
-	go run ./cmd/rmbg -i input/sample.png -o output/sample.png -v
+	ONNXRUNTIME_LIB=$(CURDIR)/lib/libonnxruntime.so go run ./cmd/rmbg -i input/sample.png -o output/sample.png -v
 
 # ==================================================================================== #
 # BUILD DEBUG
