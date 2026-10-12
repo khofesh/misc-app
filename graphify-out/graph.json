@@ -7,6 +7,61 @@
   },
   "nodes": [
     {
+      "id": "cmd_html2md_main",
+      "label": "html2md/main.go",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "file_type": "code",
+      "norm_label": "html2md/main.go",
+      "source_file": "cmd/html2md/main.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "cmd_html2md_main_main",
+      "label": "main()",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "cmd/html2md/main.go",
+      "source_location": "L11"
+    },
+    {
+      "id": "cmd_html2md_main_test_testmainconvertsfile",
+      "label": "TestMainConvertsFile()",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "file_type": "code",
+      "norm_label": "testmainconvertsfile()",
+      "source_file": "cmd/html2md/main_test.go",
+      "source_location": "L10"
+    },
+    {
+      "id": "cmd_pdf_ocr_main",
+      "label": "pdf-ocr/main.go",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "file_type": "code",
+      "norm_label": "pdf-ocr/main.go",
+      "source_file": "cmd/pdf-ocr/main.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "cmd_pdf_ocr_main_main",
+      "label": "main()",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "cmd/pdf-ocr/main.go",
+      "source_location": "L14"
+    },
+    {
       "id": "cmd_utc2local_main",
       "label": "utc2local/main.go",
       "_origin": "ast",
@@ -370,6 +425,17 @@
       "source_location": ""
     },
     {
+      "id": "internal_rmbg_remover",
+      "label": "remover.go",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Remover",
+      "file_type": "code",
+      "norm_label": "remover.go",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L1"
+    },
+    {
       "id": "internal_rmbg_remover_destroytensors",
       "label": "destroyTensors()",
       "_origin": "ast",
@@ -378,18 +444,29 @@
       "file_type": "code",
       "norm_label": "destroytensors()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L182"
+      "source_location": "L211"
     },
     {
-      "id": "internal_rmbg_remover_go_rmbg_remover",
-      "label": "Remover",
+      "id": "internal_rmbg_remover_new",
+      "label": "New()",
       "_origin": "ast",
       "community": 10,
       "community_name": "Remover",
       "file_type": "code",
-      "norm_label": "remover",
+      "norm_label": "new()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L24"
+      "source_location": "L38"
+    },
+    {
+      "id": "internal_rmbg_runtime",
+      "label": "runtime.go",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Remover",
+      "file_type": "code",
+      "norm_label": "runtime.go",
+      "source_file": "internal/rmbg/runtime.go",
+      "source_location": "L1"
     },
     {
       "id": "internal_rmbg_runtime_closeort",
@@ -400,18 +477,18 @@
       "file_type": "code",
       "norm_label": "closeort()",
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L74"
+      "source_location": "L78"
     },
     {
-      "id": "internal_rmbg_runtime_go_rmbg_device",
-      "label": "Device",
+      "id": "internal_rmbg_runtime_initort",
+      "label": "initORT()",
       "_origin": "ast",
       "community": 10,
       "community_name": "Remover",
       "file_type": "code",
-      "norm_label": "device",
+      "norm_label": "initort()",
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L15"
+      "source_location": "L61"
     },
     {
       "id": "internal_rmbg_runtime_newsessionoptions",
@@ -422,7 +499,29 @@
       "file_type": "code",
       "norm_label": "newsessionoptions()",
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L87"
+      "source_location": "L91"
+    },
+    {
+      "id": "modelspec",
+      "label": "ModelSpec",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Remover",
+      "file_type": "code",
+      "norm_label": "modelspec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "rmbg_device",
+      "label": "Device",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Remover",
+      "file_type": "code",
+      "norm_label": "device",
+      "source_file": "internal/rmbg/runtime.go",
+      "source_location": "L15"
     },
     {
       "id": "rmbg_options",
@@ -436,6 +535,17 @@
       "source_location": "L15"
     },
     {
+      "id": "rmbg_remover",
+      "label": "Remover",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Remover",
+      "file_type": "code",
+      "norm_label": "remover",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L24"
+    },
+    {
       "id": "rmbg_remover_close",
       "label": ".Close()",
       "_origin": "ast",
@@ -444,7 +554,7 @@
       "file_type": "code",
       "norm_label": ".close()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L252"
+      "source_location": "L281"
     },
     {
       "id": "rmbg_remover_createsession",
@@ -455,7 +565,18 @@
       "file_type": "code",
       "norm_label": ".createsession()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L127"
+      "source_location": "L128"
+    },
+    {
+      "id": "rmbg_remover_destroybuffers",
+      "label": ".destroyBuffers()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Remover",
+      "file_type": "code",
+      "norm_label": ".destroybuffers()",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L161"
     },
     {
       "id": "rmbg_remover_device",
@@ -466,7 +587,7 @@
       "file_type": "code",
       "norm_label": ".device()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L191"
+      "source_location": "L220"
     },
     {
       "id": "rmbg_remover_infer",
@@ -477,7 +598,7 @@
       "file_type": "code",
       "norm_label": ".infer()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L202"
+      "source_location": "L231"
     },
     {
       "id": "rmbg_remover_initsession",
@@ -499,18 +620,7 @@
       "file_type": "code",
       "norm_label": ".mask()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L224"
-    },
-    {
-      "id": "rmbg_remover_postprocess",
-      "label": ".Postprocess()",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "Remover",
-      "file_type": "code",
-      "norm_label": ".postprocess()",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L217"
+      "source_location": "L253"
     },
     {
       "id": "rmbg_remover_preprocess",
@@ -521,7 +631,7 @@
       "file_type": "code",
       "norm_label": ".preprocess()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L197"
+      "source_location": "L226"
     },
     {
       "id": "rmbg_remover_size",
@@ -532,7 +642,7 @@
       "file_type": "code",
       "norm_label": ".size()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L194"
+      "source_location": "L223"
     },
     {
       "id": "rmbg_remover_trysession",
@@ -543,14 +653,80 @@
       "file_type": "code",
       "norm_label": ".trysession()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L141"
+      "source_location": "L170"
+    },
+    {
+      "id": "rmbg_remover_warmup",
+      "label": ".warmup()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Remover",
+      "file_type": "code",
+      "norm_label": ".warmup()",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L153"
+    },
+    {
+      "id": "cmd_rmbg_main_encodeoutput",
+      "label": "encodeOutput()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "encodeoutput()",
+      "source_file": "cmd/rmbg/main.go",
+      "source_location": "L283"
+    },
+    {
+      "id": "cmd_rmbg_main_isjpeg",
+      "label": "isJPEG()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "isjpeg()",
+      "source_file": "cmd/rmbg/main.go",
+      "source_location": "L320"
+    },
+    {
+      "id": "cmd_rmbg_main_issupportedimage",
+      "label": "isSupportedImage()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "issupportedimage()",
+      "source_file": "cmd/rmbg/main.go",
+      "source_location": "L311"
+    },
+    {
+      "id": "cmd_rmbg_main_main",
+      "label": "main()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "cmd/rmbg/main.go",
+      "source_location": "L42"
+    },
+    {
+      "id": "cmd_rmbg_main_outputbase",
+      "label": "outputBase()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "outputbase()",
+      "source_file": "cmd/rmbg/main.go",
+      "source_location": "L307"
     },
     {
       "id": "cmd_rmbg_main_parseflags",
       "label": "parseFlags()",
       "_origin": "ast",
       "community": 11,
-      "community_name": "processFile",
+      "community_name": "rmbg/main_test.go",
       "file_type": "code",
       "norm_label": "parseflags()",
       "source_file": "cmd/rmbg/main.go",
@@ -561,7 +737,7 @@
       "label": "processDir()",
       "_origin": "ast",
       "community": 11,
-      "community_name": "processFile",
+      "community_name": "rmbg/main_test.go",
       "file_type": "code",
       "norm_label": "processdir()",
       "source_file": "cmd/rmbg/main.go",
@@ -572,7 +748,7 @@
       "label": "processFile()",
       "_origin": "ast",
       "community": 11,
-      "community_name": "processFile",
+      "community_name": "rmbg/main_test.go",
       "file_type": "code",
       "norm_label": "processfile()",
       "source_file": "cmd/rmbg/main.go",
@@ -583,77 +759,308 @@
       "label": "run()",
       "_origin": "ast",
       "community": 11,
-      "community_name": "processFile",
+      "community_name": "rmbg/main_test.go",
       "file_type": "code",
       "norm_label": "run()",
       "source_file": "cmd/rmbg/main.go",
       "source_location": "L46"
     },
     {
-      "id": "go_type_image_color_nrgba",
-      "label": "image/color.NRGBA",
+      "id": "cmd_rmbg_main_test",
+      "label": "rmbg/main_test.go",
       "_origin": "ast",
       "community": 11,
-      "community_name": "processFile",
+      "community_name": "rmbg/main_test.go",
       "file_type": "code",
-      "norm_label": "image/color.nrgba",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "rmbg/main_test.go",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "cmd_rmbg_main_test_runmain",
+      "label": "runMain()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "runmain()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L13"
+    },
+    {
+      "id": "cmd_rmbg_main_test_testflagerrors",
+      "label": "TestFlagErrors()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "testflagerrors()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L45"
+    },
+    {
+      "id": "cmd_rmbg_main_test_testisjpeg",
+      "label": "TestIsJPEG()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "testisjpeg()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L120"
+    },
+    {
+      "id": "cmd_rmbg_main_test_testissupportedimage",
+      "label": "TestIsSupportedImage()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "testissupportedimage()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L107"
+    },
+    {
+      "id": "cmd_rmbg_main_test_testmainprocess",
+      "label": "TestMainProcess()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "testmainprocess()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L31"
+    },
+    {
+      "id": "cmd_rmbg_main_test_testmissinginput",
+      "label": "TestMissingInput()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "testmissinginput()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L70"
+    },
+    {
+      "id": "cmd_rmbg_main_test_testoutputbase",
+      "label": "TestOutputBase()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "testoutputbase()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L91"
+    },
+    {
+      "id": "cmd_rmbg_main_test_testunknownmodel",
+      "label": "TestUnknownModel()",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "rmbg/main_test.go",
+      "file_type": "code",
+      "norm_label": "testunknownmodel()",
+      "source_file": "cmd/rmbg/main_test.go",
+      "source_location": "L78"
     },
     {
       "id": "go_type_io_writer",
       "label": "io.Writer",
       "_origin": "ast",
       "community": 11,
-      "community_name": "processFile",
+      "community_name": "rmbg/main_test.go",
       "file_type": "code",
       "norm_label": "io.writer",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "internal_rmbg_postprocess_parsehexcolor",
-      "label": "ParseHexColor()",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "processFile",
-      "file_type": "code",
-      "norm_label": "parsehexcolor()",
-      "source_file": "internal/rmbg/postprocess.go",
-      "source_location": "L182"
-    },
-    {
-      "id": "internal_rmbg_postprocess_test_testparsehexcolor",
-      "label": "TestParseHexColor()",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "processFile",
-      "file_type": "code",
-      "norm_label": "testparsehexcolor()",
-      "source_file": "internal/rmbg/postprocess_test.go",
-      "source_location": "L147"
-    },
-    {
       "id": "rmbg_config",
       "label": "config",
       "_origin": "ast",
       "community": 11,
-      "community_name": "processFile",
+      "community_name": "rmbg/main_test.go",
       "file_type": "code",
       "norm_label": "config",
       "source_file": "cmd/rmbg/main.go",
       "source_location": "L25"
     },
     {
-      "id": "cmd_rmbg_main_encodeoutput",
-      "label": "encodeOutput()",
+      "id": "go_type_image_image",
+      "label": "image.Image",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "image.image",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "internal_rmbg_exif",
+      "label": "exif.go",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "exif.go",
+      "source_file": "internal/rmbg/exif.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "internal_rmbg_exif_applyorientation",
+      "label": "applyOrientation()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "applyorientation()",
+      "source_file": "internal/rmbg/exif.go",
+      "source_location": "L90"
+    },
+    {
+      "id": "internal_rmbg_exif_exiforientation",
+      "label": "exifOrientation()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "exiforientation()",
+      "source_file": "internal/rmbg/exif.go",
+      "source_location": "L44"
+    },
+    {
+      "id": "internal_rmbg_exif_jpegorientation",
+      "label": "jpegOrientation()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "jpegorientation()",
+      "source_file": "internal/rmbg/exif.go",
+      "source_location": "L10"
+    },
+    {
+      "id": "internal_rmbg_preprocess",
+      "label": "preprocess.go",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "preprocess.go",
+      "source_file": "internal/rmbg/preprocess.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "internal_rmbg_preprocess_decode",
+      "label": "Decode()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "decode()",
+      "source_file": "internal/rmbg/preprocess.go",
+      "source_location": "L14"
+    },
+    {
+      "id": "internal_rmbg_preprocess_preprocess",
+      "label": "Preprocess()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "preprocess()",
+      "source_file": "internal/rmbg/preprocess.go",
+      "source_location": "L29"
+    },
+    {
+      "id": "internal_rmbg_preprocess_test",
+      "label": "preprocess_test.go",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "preprocess_test.go",
+      "source_file": "internal/rmbg/preprocess_test.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "internal_rmbg_preprocess_test_testapplyorientation",
+      "label": "TestApplyOrientation()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "testapplyorientation()",
+      "source_file": "internal/rmbg/preprocess_test.go",
+      "source_location": "L64"
+    },
+    {
+      "id": "internal_rmbg_preprocess_test_testdecodeinvalid",
+      "label": "TestDecodeInvalid()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "testdecodeinvalid()",
+      "source_file": "internal/rmbg/preprocess_test.go",
+      "source_location": "L58"
+    },
+    {
+      "id": "internal_rmbg_preprocess_test_testdecodepng",
+      "label": "TestDecodePNG()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "testdecodepng()",
+      "source_file": "internal/rmbg/preprocess_test.go",
+      "source_location": "L44"
+    },
+    {
+      "id": "internal_rmbg_preprocess_test_testpreprocessinvalidsize",
+      "label": "TestPreprocessInvalidSize()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "testpreprocessinvalidsize()",
+      "source_file": "internal/rmbg/preprocess_test.go",
+      "source_location": "L38"
+    },
+    {
+      "id": "internal_rmbg_preprocess_test_testpreprocesslayoutandnormalization",
+      "label": "TestPreprocessLayoutAndNormalization()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "testpreprocesslayoutandnormalization()",
+      "source_file": "internal/rmbg/preprocess_test.go",
+      "source_location": "L11"
+    },
+    {
+      "id": "internal_rmbg_preprocess_tonrgba",
+      "label": "toNRGBA()",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "image.Image",
+      "file_type": "code",
+      "norm_label": "tonrgba()",
+      "source_file": "internal/rmbg/preprocess.go",
+      "source_location": "L53"
+    },
+    {
+      "id": "go_type_image_color_nrgba",
+      "label": "image/color.NRGBA",
       "_origin": "ast",
       "community": 2,
       "community_name": "postprocess_test.go",
       "file_type": "code",
-      "norm_label": "encodeoutput()",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L283"
+      "norm_label": "image/color.nrgba",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "go_type_image_gray",
@@ -663,17 +1070,6 @@
       "community_name": "postprocess_test.go",
       "file_type": "code",
       "norm_label": "image.gray",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "go_type_image_image",
-      "label": "image.Image",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "image.image",
       "source_file": "",
       "source_location": ""
     },
@@ -689,48 +1085,15 @@
       "source_location": ""
     },
     {
-      "id": "internal_rmbg_exif",
-      "label": "exif.go",
+      "id": "internal_rmbg_postprocess",
+      "label": "postprocess.go",
       "_origin": "ast",
       "community": 2,
       "community_name": "postprocess_test.go",
       "file_type": "code",
-      "norm_label": "exif.go",
-      "source_file": "internal/rmbg/exif.go",
+      "norm_label": "postprocess.go",
+      "source_file": "internal/rmbg/postprocess.go",
       "source_location": "L1"
-    },
-    {
-      "id": "internal_rmbg_exif_applyorientation",
-      "label": "applyOrientation()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "applyorientation()",
-      "source_file": "internal/rmbg/exif.go",
-      "source_location": "L90"
-    },
-    {
-      "id": "internal_rmbg_exif_exiforientation",
-      "label": "exifOrientation()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "exiforientation()",
-      "source_file": "internal/rmbg/exif.go",
-      "source_location": "L44"
-    },
-    {
-      "id": "internal_rmbg_exif_jpegorientation",
-      "label": "jpegOrientation()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "jpegorientation()",
-      "source_file": "internal/rmbg/exif.go",
-      "source_location": "L10"
     },
     {
       "id": "internal_rmbg_postprocess_applyalpha",
@@ -786,6 +1149,17 @@
       "norm_label": "normalizemask()",
       "source_file": "internal/rmbg/postprocess.go",
       "source_location": "L14"
+    },
+    {
+      "id": "internal_rmbg_postprocess_parsehexcolor",
+      "label": "ParseHexColor()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "postprocess_test.go",
+      "file_type": "code",
+      "norm_label": "parsehexcolor()",
+      "source_file": "internal/rmbg/postprocess.go",
+      "source_location": "L182"
     },
     {
       "id": "internal_rmbg_postprocess_resizemask",
@@ -876,6 +1250,17 @@
       "source_location": "L9"
     },
     {
+      "id": "internal_rmbg_postprocess_test_testparsehexcolor",
+      "label": "TestParseHexColor()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "postprocess_test.go",
+      "file_type": "code",
+      "norm_label": "testparsehexcolor()",
+      "source_file": "internal/rmbg/postprocess_test.go",
+      "source_location": "L147"
+    },
+    {
       "id": "internal_rmbg_postprocess_test_testresizemaskaverages",
       "label": "TestResizeMaskAverages()",
       "_origin": "ast",
@@ -931,114 +1316,15 @@
       "source_location": "L113"
     },
     {
-      "id": "internal_rmbg_preprocess",
-      "label": "preprocess.go",
+      "id": "rmbg_remover_postprocess",
+      "label": ".Postprocess()",
       "_origin": "ast",
       "community": 2,
       "community_name": "postprocess_test.go",
       "file_type": "code",
-      "norm_label": "preprocess.go",
-      "source_file": "internal/rmbg/preprocess.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "internal_rmbg_preprocess_decode",
-      "label": "Decode()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "decode()",
-      "source_file": "internal/rmbg/preprocess.go",
-      "source_location": "L14"
-    },
-    {
-      "id": "internal_rmbg_preprocess_preprocess",
-      "label": "Preprocess()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "preprocess()",
-      "source_file": "internal/rmbg/preprocess.go",
-      "source_location": "L29"
-    },
-    {
-      "id": "internal_rmbg_preprocess_test",
-      "label": "preprocess_test.go",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "preprocess_test.go",
-      "source_file": "internal/rmbg/preprocess_test.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "internal_rmbg_preprocess_test_testapplyorientation",
-      "label": "TestApplyOrientation()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "testapplyorientation()",
-      "source_file": "internal/rmbg/preprocess_test.go",
-      "source_location": "L64"
-    },
-    {
-      "id": "internal_rmbg_preprocess_test_testdecodeinvalid",
-      "label": "TestDecodeInvalid()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "testdecodeinvalid()",
-      "source_file": "internal/rmbg/preprocess_test.go",
-      "source_location": "L58"
-    },
-    {
-      "id": "internal_rmbg_preprocess_test_testdecodepng",
-      "label": "TestDecodePNG()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "testdecodepng()",
-      "source_file": "internal/rmbg/preprocess_test.go",
-      "source_location": "L44"
-    },
-    {
-      "id": "internal_rmbg_preprocess_test_testpreprocessinvalidsize",
-      "label": "TestPreprocessInvalidSize()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "testpreprocessinvalidsize()",
-      "source_file": "internal/rmbg/preprocess_test.go",
-      "source_location": "L38"
-    },
-    {
-      "id": "internal_rmbg_preprocess_test_testpreprocesslayoutandnormalization",
-      "label": "TestPreprocessLayoutAndNormalization()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "testpreprocesslayoutandnormalization()",
-      "source_file": "internal/rmbg/preprocess_test.go",
-      "source_location": "L11"
-    },
-    {
-      "id": "internal_rmbg_preprocess_tonrgba",
-      "label": "toNRGBA()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "postprocess_test.go",
-      "file_type": "code",
-      "norm_label": "tonrgba()",
-      "source_file": "internal/rmbg/preprocess.go",
-      "source_location": "L53"
+      "norm_label": ".postprocess()",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L246"
     },
     {
       "id": "rmbg_remover_remove",
@@ -1049,7 +1335,7 @@
       "file_type": "code",
       "norm_label": ".remove()",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L243"
+      "source_location": "L272"
     },
     {
       "id": "cmd_spinner_main",
@@ -1514,149 +1800,6 @@
       "source_location": "L10"
     },
     {
-      "id": "cmd_rmbg_main_isjpeg",
-      "label": "isJPEG()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "isjpeg()",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L320"
-    },
-    {
-      "id": "cmd_rmbg_main_issupportedimage",
-      "label": "isSupportedImage()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "issupportedimage()",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L311"
-    },
-    {
-      "id": "cmd_rmbg_main_main",
-      "label": "main()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L42"
-    },
-    {
-      "id": "cmd_rmbg_main_outputbase",
-      "label": "outputBase()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "outputbase()",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L307"
-    },
-    {
-      "id": "cmd_rmbg_main_test",
-      "label": "rmbg/main_test.go",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "rmbg/main_test.go",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "cmd_rmbg_main_test_runmain",
-      "label": "runMain()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "runmain()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L13"
-    },
-    {
-      "id": "cmd_rmbg_main_test_testflagerrors",
-      "label": "TestFlagErrors()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "testflagerrors()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L45"
-    },
-    {
-      "id": "cmd_rmbg_main_test_testisjpeg",
-      "label": "TestIsJPEG()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "testisjpeg()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L120"
-    },
-    {
-      "id": "cmd_rmbg_main_test_testissupportedimage",
-      "label": "TestIsSupportedImage()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "testissupportedimage()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L107"
-    },
-    {
-      "id": "cmd_rmbg_main_test_testmainprocess",
-      "label": "TestMainProcess()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "testmainprocess()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L31"
-    },
-    {
-      "id": "cmd_rmbg_main_test_testmissinginput",
-      "label": "TestMissingInput()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "testmissinginput()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L70"
-    },
-    {
-      "id": "cmd_rmbg_main_test_testoutputbase",
-      "label": "TestOutputBase()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "testoutputbase()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L91"
-    },
-    {
-      "id": "cmd_rmbg_main_test_testunknownmodel",
-      "label": "TestUnknownModel()",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "testing.T",
-      "file_type": "code",
-      "norm_label": "testunknownmodel()",
-      "source_file": "cmd/rmbg/main_test.go",
-      "source_location": "L78"
-    },
-    {
       "id": "go_type_testing_t",
       "label": "testing.T",
       "_origin": "ast",
@@ -1745,6 +1888,72 @@
       "source_location": "L94"
     },
     {
+      "id": "internal_rmbg_runtime_findortlib",
+      "label": "FindORTLib()",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "testing.T",
+      "file_type": "code",
+      "norm_label": "findortlib()",
+      "source_file": "internal/rmbg/runtime.go",
+      "source_location": "L31"
+    },
+    {
+      "id": "internal_rmbg_runtime_test",
+      "label": "runtime_test.go",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "testing.T",
+      "file_type": "code",
+      "norm_label": "runtime_test.go",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "internal_rmbg_runtime_test_testfindortlibenv",
+      "label": "TestFindORTLibEnv()",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "testing.T",
+      "file_type": "code",
+      "norm_label": "testfindortlibenv()",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L52"
+    },
+    {
+      "id": "internal_rmbg_runtime_test_testfindortlibexplicit",
+      "label": "TestFindORTLibExplicit()",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "testing.T",
+      "file_type": "code",
+      "norm_label": "testfindortlibexplicit()",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L17"
+    },
+    {
+      "id": "internal_rmbg_runtime_test_testfindortlibexplicitmissing",
+      "label": "TestFindORTLibExplicitMissing()",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "testing.T",
+      "file_type": "code",
+      "norm_label": "testfindortlibexplicitmissing()",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L11"
+    },
+    {
+      "id": "internal_rmbg_runtime_test_testfindortlibworkingdir",
+      "label": "TestFindORTLibWorkingDir()",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "testing.T",
+      "file_type": "code",
+      "norm_label": "testfindortlibworkingdir()",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L32"
+    },
+    {
       "id": "cmd_decode_encode_main",
       "label": "decode-encode/main.go",
       "_origin": "ast",
@@ -1756,28 +1965,6 @@
       "source_location": "L1"
     },
     {
-      "id": "cmd_html2md_main",
-      "label": "html2md/main.go",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "html2md/main.go",
-      "source_file": "cmd/html2md/main.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "cmd_html2md_main_main",
-      "label": "main()",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "cmd/html2md/main.go",
-      "source_location": "L11"
-    },
-    {
       "id": "cmd_html2md_main_test",
       "label": "html2md/main_test.go",
       "_origin": "ast",
@@ -1787,17 +1974,6 @@
       "norm_label": "html2md/main_test.go",
       "source_file": "cmd/html2md/main_test.go",
       "source_location": "L1"
-    },
-    {
-      "id": "cmd_html2md_main_test_testmainconvertsfile",
-      "label": "TestMainConvertsFile()",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "testmainconvertsfile()",
-      "source_file": "cmd/html2md/main_test.go",
-      "source_location": "L10"
     },
     {
       "id": "cmd_html2text_main",
@@ -1820,28 +1996,6 @@
       "norm_label": "html2text/main_test.go",
       "source_file": "cmd/html2text/main_test.go",
       "source_location": "L1"
-    },
-    {
-      "id": "cmd_pdf_ocr_main",
-      "label": "pdf-ocr/main.go",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "pdf-ocr/main.go",
-      "source_file": "cmd/pdf-ocr/main.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "cmd_pdf_ocr_main_main",
-      "label": "main()",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "cmd/pdf-ocr/main.go",
-      "source_location": "L14"
     },
     {
       "id": "cmd_rmbg_main",
@@ -1985,72 +2139,6 @@
       "norm_label": "testremoveintegration()",
       "source_file": "internal/rmbg/integration_test.go",
       "source_location": "L22"
-    },
-    {
-      "id": "internal_rmbg_postprocess",
-      "label": "postprocess.go",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "postprocess.go",
-      "source_file": "internal/rmbg/postprocess.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "internal_rmbg_remover",
-      "label": "remover.go",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "remover.go",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "internal_rmbg_remover_new",
-      "label": "New()",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "new()",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L38"
-    },
-    {
-      "id": "internal_rmbg_runtime",
-      "label": "runtime.go",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "runtime.go",
-      "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "internal_rmbg_runtime_findortlib",
-      "label": "FindORTLib()",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "findortlib()",
-      "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L30"
-    },
-    {
-      "id": "internal_rmbg_runtime_initort",
-      "label": "initORT()",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "file_type": "code",
-      "norm_label": "initort()",
-      "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L57"
     },
     {
       "id": "internal_rmbg_models",
@@ -2341,6 +2429,72 @@
       "source_location": "L2"
     },
     {
+      "id": "go_pkg_context",
+      "label": "go_pkg_context",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_context",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_fmt",
+      "label": "go_pkg_fmt",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_fmt",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
+      "label": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
+      "label": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_log",
+      "label": "go_pkg_log",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_log",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_os_exec",
+      "label": "go_pkg_os_exec",
+      "community": 0,
+      "community_name": "utc2local/main_test.go",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_os_exec",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "go_pkg_time_tzdata",
       "label": "go_pkg_time_tzdata",
       "community": 0,
@@ -2396,10 +2550,32 @@
       "type": "external"
     },
     {
+      "id": "go_pkg_github_com_yalue_onnxruntime_go",
+      "label": "go_pkg_github_com_yalue_onnxruntime_go",
+      "community": 10,
+      "community_name": "Remover",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_github_com_yalue_onnxruntime_go",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_sync",
+      "label": "go_pkg_sync",
+      "community": 10,
+      "community_name": "Remover",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_sync",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "go_pkg_bytes",
       "label": "go_pkg_bytes",
-      "community": 2,
-      "community_name": "postprocess_test.go",
+      "community": 12,
+      "community_name": "image.Image",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_bytes",
@@ -2409,8 +2585,8 @@
     {
       "id": "go_pkg_encoding_binary",
       "label": "go_pkg_encoding_binary",
-      "community": 2,
-      "community_name": "postprocess_test.go",
+      "community": 12,
+      "community_name": "image.Image",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_encoding_binary",
@@ -2420,8 +2596,8 @@
     {
       "id": "go_pkg_golang_org_x_image_draw",
       "label": "go_pkg_golang_org_x_image_draw",
-      "community": 2,
-      "community_name": "postprocess_test.go",
+      "community": 12,
+      "community_name": "image.Image",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_golang_org_x_image_draw",
@@ -2431,8 +2607,8 @@
     {
       "id": "go_pkg_golang_org_x_image_webp",
       "label": "go_pkg_golang_org_x_image_webp",
-      "community": 2,
-      "community_name": "postprocess_test.go",
+      "community": 12,
+      "community_name": "image.Image",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_golang_org_x_image_webp",
@@ -2442,11 +2618,22 @@
     {
       "id": "go_pkg_image_png",
       "label": "go_pkg_image_png",
+      "community": 12,
+      "community_name": "image.Image",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_image_png",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_strconv",
+      "label": "go_pkg_strconv",
       "community": 2,
       "community_name": "postprocess_test.go",
       "external": true,
       "file_type": "concept",
-      "norm_label": "go_pkg_image_png",
+      "norm_label": "go_pkg_strconv",
       "source_file": "",
       "type": "external"
     },
@@ -2484,17 +2671,6 @@
       "type": "external"
     },
     {
-      "id": "go_pkg_context",
-      "label": "go_pkg_context",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_context",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "go_pkg_flag",
       "label": "go_pkg_flag",
       "community": 6,
@@ -2502,39 +2678,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_flag",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_fmt",
-      "label": "go_pkg_fmt",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_fmt",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
-      "label": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
-      "label": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
       "source_file": "",
       "type": "external"
     },
@@ -2557,17 +2700,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_github_com_rs_zerolog_log",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_github_com_yalue_onnxruntime_go",
-      "label": "go_pkg_github_com_yalue_onnxruntime_go",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_github_com_yalue_onnxruntime_go",
       "source_file": "",
       "type": "external"
     },
@@ -2605,17 +2737,6 @@
       "type": "external"
     },
     {
-      "id": "go_pkg_log",
-      "label": "go_pkg_log",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_log",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "go_pkg_net_url",
       "label": "go_pkg_net_url",
       "community": 6,
@@ -2638,17 +2759,6 @@
       "type": "external"
     },
     {
-      "id": "go_pkg_os_exec",
-      "label": "go_pkg_os_exec",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_os_exec",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "go_pkg_path_filepath",
       "label": "go_pkg_path_filepath",
       "community": 6,
@@ -2660,17 +2770,6 @@
       "type": "external"
     },
     {
-      "id": "go_pkg_strconv",
-      "label": "go_pkg_strconv",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_strconv",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "go_pkg_strings",
       "label": "go_pkg_strings",
       "community": 6,
@@ -2678,17 +2777,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_strings",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_sync",
-      "label": "go_pkg_sync",
-      "community": 6,
-      "community_name": "rmbg/main.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_sync",
       "source_file": "",
       "type": "external"
     },
@@ -3580,14 +3668,14 @@
     },
     {
       "source": "rmbg_remover_close",
-      "target": "internal_rmbg_remover_destroytensors",
+      "target": "rmbg_remover_destroybuffers",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L260",
+      "source_location": "L286",
       "weight": 1.0
     },
     {
@@ -3599,7 +3687,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L130",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover_createsession",
+      "target": "rmbg_remover_warmup",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover_createsession",
+      "target": "rmbg_remover_destroybuffers",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover_destroybuffers",
+      "target": "internal_rmbg_remover_destroytensors",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -3623,7 +3747,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L230",
+      "source_location": "L259",
       "weight": 1.0
     },
     {
@@ -3635,7 +3759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L234",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -3647,7 +3771,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L238",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -3659,7 +3783,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L244",
+      "source_location": "L273",
       "weight": 1.0
     },
     {
@@ -3671,79 +3795,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L159",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "go_type_github_com_yalue_onnxruntime_go_advancedsession",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "go_type_github_com_yalue_onnxruntime_go_tensor",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_modelspec",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "internal_rmbg_runtime_go_rmbg_device",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "go_type_sync_mutex",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L34",
-      "weight": 1.0
-    },
-    {
-      "source": "rmbg_config",
-      "target": "internal_rmbg_runtime_go_rmbg_device",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L29",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -3760,7 +3812,7 @@
     },
     {
       "source": "rmbg_options",
-      "target": "internal_rmbg_runtime_go_rmbg_device",
+      "target": "rmbg_device",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3780,6 +3832,66 @@
       "context": "field",
       "source_file": "internal/rmbg/models.go",
       "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "go_type_github_com_yalue_onnxruntime_go_advancedsession",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "go_type_github_com_yalue_onnxruntime_go_tensor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "modelspec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_device",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "go_type_sync_mutex",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -5547,6 +5659,42 @@
       "weight": 1.0
     },
     {
+      "source": "internal_rmbg_runtime_test",
+      "target": "go_pkg_os",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test",
+      "target": "go_pkg_path_filepath",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test",
+      "target": "go_pkg_testing",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "internal_spinner_spinner_test",
       "target": "go_pkg_io",
       "relation": "imports_from",
@@ -5908,18 +6056,6 @@
     },
     {
       "source": "cmd_rmbg_main_processdir",
-      "target": "internal_rmbg_remover_go_rmbg_remover",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "parameter_type",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L157",
-      "weight": 1.0
-    },
-    {
-      "source": "cmd_rmbg_main_processdir",
       "target": "rmbg_config",
       "relation": "references",
       "_origin": "ast",
@@ -5928,18 +6064,6 @@
       "context": "parameter_type",
       "source_file": "cmd/rmbg/main.go",
       "source_location": "L157",
-      "weight": 1.0
-    },
-    {
-      "source": "cmd_rmbg_main_processfile",
-      "target": "internal_rmbg_remover_go_rmbg_remover",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "parameter_type",
-      "source_file": "cmd/rmbg/main.go",
-      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -6779,7 +6903,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L182",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -6803,7 +6927,55 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L87",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test_testfindortlibenv",
+      "target": "go_type_testing_t",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test_testfindortlibexplicit",
+      "target": "go_type_testing_t",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test_testfindortlibexplicitmissing",
+      "target": "go_type_testing_t",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test_testfindortlibworkingdir",
+      "target": "go_type_testing_t",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -6899,7 +7071,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -6911,7 +7083,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -6935,7 +7107,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L224",
+      "source_location": "L253",
       "weight": 1.0
     },
     {
@@ -6947,7 +7119,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L197",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -6959,7 +7131,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L243",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
@@ -6971,7 +7143,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L141",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
@@ -6983,7 +7155,19 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L141",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover_warmup",
+      "target": "go_type_github_com_yalue_onnxruntime_go_advancedsession",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L153",
       "weight": 1.0
     },
     {
@@ -7204,7 +7388,7 @@
     },
     {
       "source": "internal_rmbg_remover_new",
-      "target": "internal_rmbg_remover_go_rmbg_remover",
+      "target": "rmbg_remover",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7223,7 +7407,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L87",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -7247,31 +7431,31 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
       "source": "rmbg_remover_createsession",
-      "target": "internal_rmbg_runtime_go_rmbg_device",
+      "target": "rmbg_device",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
       "source": "rmbg_remover_device",
-      "target": "internal_rmbg_runtime_go_rmbg_device",
+      "target": "rmbg_device",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L191",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -7283,7 +7467,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L224",
+      "source_location": "L253",
       "weight": 1.0
     },
     {
@@ -7295,7 +7479,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L217",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -7307,7 +7491,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L243",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
@@ -7319,19 +7503,19 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L141",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
       "source": "rmbg_remover_trysession",
-      "target": "internal_rmbg_runtime_go_rmbg_device",
+      "target": "rmbg_device",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L141",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
@@ -8706,12 +8890,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L182",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
       "source": "internal_rmbg_remover",
-      "target": "internal_rmbg_remover_go_rmbg_remover",
+      "target": "rmbg_remover",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8733,7 +8917,7 @@
     },
     {
       "source": "internal_rmbg_runtime",
-      "target": "internal_rmbg_runtime_go_rmbg_device",
+      "target": "rmbg_device",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8750,7 +8934,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -8761,7 +8945,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L57",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -8772,7 +8956,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L74",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -8783,7 +8967,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "internal/rmbg/runtime.go",
-      "source_location": "L87",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test",
+      "target": "internal_rmbg_runtime_test_testfindortlibexplicitmissing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test",
+      "target": "internal_rmbg_runtime_test_testfindortlibexplicit",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test",
+      "target": "internal_rmbg_runtime_test_testfindortlibworkingdir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test",
+      "target": "internal_rmbg_runtime_test_testfindortlibenv",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -8897,127 +9125,6 @@
       "weight": 1.0
     },
     {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_createsession",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L127",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_trysession",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L141",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_device",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L191",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_size",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L194",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_preprocess",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L197",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_infer",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L202",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_postprocess",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L217",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_mask",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L224",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_remove",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L243",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_close",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L252",
-      "weight": 1.0
-    },
-    {
-      "source": "internal_rmbg_remover_go_rmbg_remover",
-      "target": "rmbg_remover_initsession",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "internal/rmbg/remover.go",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
       "source": "rmbg_progresswriter",
       "target": "rmbg_progresswriter_write",
       "relation": "method",
@@ -9037,6 +9144,149 @@
       "confidence_score": 1.0,
       "source_file": "internal/rmbg/models.go",
       "source_location": "L240",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_createsession",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_warmup",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_destroybuffers",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_trysession",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_device",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_size",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_preprocess",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_infer",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L231",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_postprocess",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_mask",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_remove",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L272",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_close",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L281",
+      "weight": 1.0
+    },
+    {
+      "source": "rmbg_remover",
+      "target": "rmbg_remover_initsession",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "internal/rmbg/remover.go",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -9815,6 +10065,54 @@
       "weight": 1.0
     },
     {
+      "source": "internal_rmbg_runtime_test_testfindortlibenv",
+      "target": "internal_rmbg_runtime_findortlib",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test_testfindortlibexplicit",
+      "target": "internal_rmbg_runtime_findortlib",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test_testfindortlibexplicitmissing",
+      "target": "internal_rmbg_runtime_findortlib",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "internal_rmbg_runtime_test_testfindortlibworkingdir",
+      "target": "internal_rmbg_runtime_findortlib",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "internal/rmbg/runtime_test.go",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
       "source": "internal_spinner_spinner_test_testnewdefaults",
       "target": "internal_spinner_spinnner_new",
       "relation": "calls",
@@ -9895,7 +10193,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L261",
+      "source_location": "L287",
       "weight": 1.0
     },
     {
@@ -9907,7 +10205,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L218",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -9919,7 +10217,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L219",
+      "source_location": "L248",
       "weight": 1.0
     },
     {
@@ -9931,7 +10229,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L220",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -9943,7 +10241,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L248",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -9955,10 +10253,10 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "internal/rmbg/remover.go",
-      "source_location": "L142",
+      "source_location": "L171",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "814d10a2e7ce08b6ecd47a527228a48cfaab3ed0"
+  "built_at_commit": "b3f40d3f39835fa15b2d95de288d693f569fde9f"
 }
