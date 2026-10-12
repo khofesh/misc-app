@@ -1,74 +1,31 @@
 # .graphifyignore — gitignore syntax.
 # Merged on top of .gitignore (read last), so it can only exclude MORE,
 # never re-include something .gitignore already dropped.
+#
+# The graph is code-only: Go sources under cmd/ and internal/ (tests included).
 
-# ── .NET build output ─────────────────────────────────────────────
-# Mostly covered by .gitignore, repeated here so a run on a dirty
-# working tree (327M under src/JobTracker.App/bin) never picks it up.
+# ── Build output ──────────────────────────────────────────────────
 bin/
-obj/
-build/
-artifacts/
-*.dll
-*.pdb
-*.deps.json
-*.runtimeconfig.json
-*.AssemblyInfo.cs
-*.GlobalUsings.g.cs
-*.NuGetPackageVersions.g.props
+vendor/
+*.test
+*.out
 
-# ── EF Core generated code ────────────────────────────────────────
-# Designer.cs and the model snapshot are machine-written mirrors of the
-# entity classes; indexing them duplicates the whole schema as noise.
-# The hand-written Up/Down migrations themselves are kept.
-src/JobTracker.Data/Migrations/*.Designer.cs
-src/JobTracker.Data/Migrations/AppDbContextModelSnapshot.cs
-
-# ── Binary / design assets ────────────────────────────────────────
-# Images are routed to semantic (LLM) extraction; app icons carry no
-# architectural information.
-*.png
-*.ico
-*.icns
-*.jpg
-*.jpeg
-*.gif
-*.svg
-design/
-
-# ── Packaging & scaffolding ───────────────────────────────────────
-# One-shot bootstrap script that re-creates the project layout — its
-# content is a stale duplicate of the real tree.
-setup_job_tracker.sh
-packaging/linux/AppRun
-packaging/linux/JobTracker.desktop
-
-# ── Static mockup ─────────────────────────────────────────────────
-# Standalone HTML wireframe, not wired into the Avalonia app.
-job-tracker-wireframe.html
+# ── Local sample data ─────────────────────────────────────────────
+# Tool inputs/outputs; may contain personal files (resumes, PDFs).
+input/
+output/
 
 # ── Editor / tooling config ───────────────────────────────────────
 .vscode/
-.windsurf/
 .idea/
-.vs/
-
-# ── Local data & logs ─────────────────────────────────────────────
-*.db
-*.db-shm
-*.db-wal
-*.sqlite
-*.sqlite3
-*.log
+.claude/
+.codex/
 
 # ── graphify's own output ─────────────────────────────────────────
 graphify-out/
 .graphify/
 
-# extra
-docs/*
-.claude/
-.codex/
-AGENTS.md
-CLAUDE.md
-README.md
+# ── Docs ──────────────────────────────────────────────────────────
+# Kept out so the graph stays AST-only (no LLM extraction).
+docs/
+*.md
