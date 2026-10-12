@@ -42,6 +42,20 @@ run/http-middleware:
 run/spinner:
 	go run ./cmd/spinner
 
+## run/rmbg: run rmbg on a sample image
+# Directories searched before the inherited LD_LIBRARY_PATH. Override these to
+# point at the CUDA toolkit and a single cuDNN 9 install (keep the whole cuDNN
+# set from one release together, or ONNX Runtime aborts with a sublibrary
+# version mismatch).
+CUDA_LIB_DIRS ?= /usr/local/cuda/lib64
+CUDNN_LIB_DIRS ?= /opt/cudnn/current/lib
+
+.PHONY: run/rmbg
+run/rmbg:
+	LD_LIBRARY_PATH=$(CUDNN_LIB_DIRS):$(CUDA_LIB_DIRS):$$LD_LIBRARY_PATH \
+	ONNXRUNTIME_LIB=$(CURDIR)/lib/libonnxruntime.so \
+	go run ./cmd/rmbg -i input/sample.png -o output/sample.png -v
+
 # ==================================================================================== #
 # BUILD DEBUG
 # ==================================================================================== #
@@ -76,6 +90,12 @@ build/debug/utc2local:
 	@echo 'Building cmd/utc2local...'
 	go build -gcflags=all="-N -l" -o=./bin/utc2local-debug ./cmd/utc2local
 
+## build/debug/rmbg: build the cmd/rmbg application with debugging flags enabled
+.PHONY: build/debug/rmbg
+build/debug/rmbg:
+	@echo 'Building cmd/rmbg...'
+	CGO_ENABLED=1 go build -gcflags=all="-N -l" -o=./bin/rmbg-debug ./cmd/rmbg
+
 # ==================================================================================== #
 # BUILD 
 # ==================================================================================== #
@@ -86,6 +106,31 @@ build/utc2local:
 	@echo 'Building cmd/utc2local...'
 	go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/utc2local ./cmd/utc2local
 	GOOS=linux go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/linux/utc2local ./cmd/utc2local
+
+# ONNX Runtime version. Must match the C API version the pinned
+# onnxruntime_go release supports (it is built against ORT 1.29 headers, and
+# ORT keeps the older C API available in newer releases).
+ORT_VERSION ?= 1.31.0
+# GPU build flavour: cuda13 (CUDA 13.x + cuDNN 9) or cuda12 (CUDA 12.8 + cuDNN 9).
+ORT_CUDA ?= cuda13
+
+## build/rmbg: build the cmd/rmbg application (requires ./lib/libonnxruntime.so at runtime)
+.PHONY: build/rmbg
+build/rmbg:
+	@echo 'Building cmd/rmbg...'
+	CGO_ENABLED=1 go build -ldflags="-s -w" -o=./bin/rmbg ./cmd/rmbg
+
+## ort/cpu: download the ONNX Runtime CPU build into ./lib
+.PHONY: ort/cpu
+ort/cpu:
+	@mkdir -p lib
+	curl -fsSL https://github.com/microsoft/onnxruntime/releases/download/v$(ORT_VERSION)/onnxruntime-linux-x64-$(ORT_VERSION).tgz | tar -xz -C lib --strip-components=2
+
+## ort/gpu: download the ONNX Runtime GPU build (ORT_CUDA=cuda13|cuda12) into ./lib
+.PHONY: ort/gpu
+ort/gpu:
+	@mkdir -p lib
+	curl -fsSL https://github.com/microsoft/onnxruntime/releases/download/v$(ORT_VERSION)/onnxruntime-linux-x64-gpu_$(ORT_CUDA)-$(ORT_VERSION).tgz | tar -xz -C lib --strip-components=2
 
 # ==================================================================================== #
 # QUALITY CONTROL

@@ -1,0 +1,31 @@
+# .graphifyignore — gitignore syntax.
+# Merged on top of .gitignore (read last), so it can only exclude MORE,
+# never re-include something .gitignore already dropped.
+#
+# The graph is code-only: Go sources under cmd/ and internal/ (tests included).
+
+# ── Build output ──────────────────────────────────────────────────
+bin/
+vendor/
+*.test
+*.out
+
+# ── Local sample data ─────────────────────────────────────────────
+# Tool inputs/outputs; may contain personal files (resumes, PDFs).
+input/
+output/
+
+# ── Editor / tooling config ───────────────────────────────────────
+.vscode/
+.idea/
+.claude/
+.codex/
+
+# ── graphify's own output ─────────────────────────────────────────
+graphify-out/
+.graphify/
+
+# ── Docs ──────────────────────────────────────────────────────────
+# Kept out so the graph stays AST-only (no LLM extraction).
+docs/
+*.md
