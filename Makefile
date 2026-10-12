@@ -43,9 +43,18 @@ run/spinner:
 	go run ./cmd/spinner
 
 ## run/rmbg: run rmbg on a sample image
+# Directories searched before the inherited LD_LIBRARY_PATH. Override these to
+# point at the CUDA toolkit and a single cuDNN 9 install (keep the whole cuDNN
+# set from one release together, or ONNX Runtime aborts with a sublibrary
+# version mismatch).
+CUDA_LIB_DIRS ?= /usr/local/cuda/lib64
+CUDNN_LIB_DIRS ?= /opt/cudnn/current/lib
+
 .PHONY: run/rmbg
 run/rmbg:
-	ONNXRUNTIME_LIB=$(CURDIR)/lib/libonnxruntime.so go run ./cmd/rmbg -i input/sample.png -o output/sample.png -v
+	LD_LIBRARY_PATH=$(CUDNN_LIB_DIRS):$(CUDA_LIB_DIRS):$$LD_LIBRARY_PATH \
+	ONNXRUNTIME_LIB=$(CURDIR)/lib/libonnxruntime.so \
+	go run ./cmd/rmbg -i input/sample.png -o output/sample.png -v
 
 # ==================================================================================== #
 # BUILD DEBUG

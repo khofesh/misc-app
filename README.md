@@ -110,4 +110,7 @@ visible and they are being mixed. Keep the loader and all `libcudnn_*.so.9`
 sublibraries from a single cuDNN release, with that directory **before** any
 other directory that ships its own cuDNN (for example an ArrayFire install):
 `LD_LIBRARY_PATH=/opt/cudnn/current/lib:/usr/local/cuda/lib64`.
+`make run/rmbg` prepends `CUDNN_LIB_DIRS` and `CUDA_LIB_DIRS` (defaults
+`/opt/cudnn/current/lib` and `/usr/local/cuda/lib64`) for this reason; override
+them to point at your install.
 
