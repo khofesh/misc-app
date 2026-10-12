@@ -1,108 +1,122 @@
 # Graph Report - misc-app  (2026-10-12)
 
 ## Corpus Check
-- 18 files · ~4,136 words
+- 32 files · ~11,505 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 6)
 
 ## Summary
-- 113 nodes · 240 edges · 10 communities (7 shown, 3 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.85)
+- 248 nodes · 615 edges · 12 communities (10 shown, 2 thin omitted)
+- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 72 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0a28850c`
+- Built from commit: `814d10a2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - utc2local/main_test.go
 - http-middleware/main_test.go
-- HtmlToText
+- postprocess_test.go
 - spinner_test.go
 - html2text.go
 - testing.T
-- go_pkg_os
-- Spinner
+- rmbg/main.go
+- models.go
 - github.com/khofesh/misc-app
 - opencode.json
+- Remover
+- processFile
 
 ## God Nodes (most connected - your core abstractions)
-1. `New()` - 9 edges
-2. `HtmlToText()` - 8 edges
-3. `Spinner` - 8 edges
-4. `writeNode()` - 7 edges
-5. `runMain()` - 7 edges
-6. `setupDir()` - 7 edges
-7. `captureStdout()` - 6 edges
-8. `convertToTimezone()` - 5 edges
-9. `runMain()` - 5 edges
-10. `writeChildren()` - 5 edges
+1. `Remover` - 20 edges
+2. `ModelPath()` - 12 edges
+3. `New()` - 12 edges
+4. `ApplyAlpha()` - 9 edges
+5. `Blend()` - 9 edges
+6. `solid()` - 9 edges
+7. `New()` - 9 edges
+8. `processFile()` - 8 edges
+9. `encodeOutput()` - 8 edges
+10. `HtmlToText()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `main()` --calls--> `HtmlToText()`  [EXTRACTED]
-  cmd/html2text/main.go → internal/htmltag/html2text.go
-- `main()` --calls--> `New()`  [EXTRACTED]
-  cmd/spinner/main.go → internal/spinner/spinnner.go
-- `TestMainProcess()` --calls--> `main()`  [INFERRED]
-  cmd/decode-encode/main_test.go → cmd/decode-encode/main.go
-- `TestConvertToTimezone()` --calls--> `convertToTimezone()`  [INFERRED]
-  cmd/utc2local/main_test.go → cmd/utc2local/main.go
-- `TestConvertToTimezoneInvalid()` --calls--> `convertToTimezone()`  [INFERRED]
-  cmd/utc2local/main_test.go → cmd/utc2local/main.go
+- `config` --references--> `Device`  [EXTRACTED]
+  cmd/rmbg/main.go → internal/rmbg/runtime.go
+- `run()` --calls--> `New()`  [EXTRACTED]
+  cmd/rmbg/main.go → internal/rmbg/remover.go
+- `processDir()` --references--> `Remover`  [EXTRACTED]
+  cmd/rmbg/main.go → internal/rmbg/remover.go
+- `processFile()` --calls--> `Threshold()`  [EXTRACTED]
+  cmd/rmbg/main.go → internal/rmbg/postprocess.go
+- `processFile()` --calls--> `Decode()`  [EXTRACTED]
+  cmd/rmbg/main.go → internal/rmbg/preprocess.go
 
 ## Import Cycles
 - None detected.
 
-## Communities (10 total, 3 thin omitted)
+## Communities (12 total, 2 thin omitted)
 
 ### Community 0 - "utc2local/main_test.go"
-Cohesion: 0.14
-Nodes (11): main(), convertToTimezone(), main(), showHelp(), runMain(), TestConvertToTimezone(), TestConvertToTimezoneInvalid(), TestMainInvalidTime() (+3 more)
+Cohesion: 0.22
+Nodes (10): convertToTimezone(), main(), showHelp(), runMain(), TestConvertToTimezone(), TestConvertToTimezoneInvalid(), TestMainInvalidTime(), TestMainNoArgsShowsHelp() (+2 more)
 
 ### Community 1 - "http-middleware/main_test.go"
-Cohesion: 0.16
+Cohesion: 0.17
 Nodes (10): admin(), home(), logRequest(), main(), requireBasicAuthentication(), serverHeader(), TestHandlers(), TestLogRequest() (+2 more)
 
-### Community 2 - "HtmlToText"
-Cohesion: 0.48
-Nodes (6): HtmlToText(), TestHtmlToText(), TestHtmlToTextEmpty(), TestHtmlToTextLayout(), TestHtmlToTextNoBlankLineRuns(), TestHtmlToTextNoDuplicateText()
+### Community 2 - "postprocess_test.go"
+Cohesion: 0.09
+Nodes (29): encodeOutput(), applyOrientation(), exifOrientation(), jpegOrientation(), ApplyAlpha(), Blend(), blend(), MaskToGray() (+21 more)
 
 ### Community 3 - "spinner_test.go"
-Cohesion: 0.32
-Nodes (9): main(), captureStdout(), TestNewDefaults(), TestRestart(), TestSetters(), TestStartStop(), TestStartTwiceIsNoop(), TestStopWithoutStartIsNoop() (+1 more)
+Cohesion: 0.18
+Nodes (10): main(), captureStdout(), TestNewDefaults(), TestRestart(), TestSetters(), TestStartStop(), TestStartTwiceIsNoop(), TestStopWithoutStartIsNoop() (+2 more)
 
 ### Community 4 - "html2text.go"
 Cohesion: 0.35
 Nodes (7): atLineStartOrSpace(), collapseSpace(), ensureNewline(), isHTMLSpace(), writeChildren(), writeInline(), writeNode()
 
 ### Community 5 - "testing.T"
-Cohesion: 0.55
-Nodes (9): readOutput(), runMain(), setupDir(), TestDecode(), TestDecodeInvalidEscape(), TestEncode(), TestFlagValidation(), TestMainProcess() (+1 more)
+Cohesion: 0.13
+Nodes (30): main(), readOutput(), runMain(), setupDir(), TestDecode(), TestDecodeInvalidEscape(), TestEncode(), TestFlagValidation() (+22 more)
 
-### Community 6 - "go_pkg_os"
-Cohesion: 0.15
-Nodes (4): main(), TestMainConvertsFile(), main(), TestMainConvertsFile()
+### Community 6 - "rmbg/main.go"
+Cohesion: 0.09
+Nodes (12): main(), TestMainConvertsFile(), meanAbsGrayDiff(), TestCPUvsCUDA(), fixture(), ortLibPath(), BenchmarkRemove(), meanAlpha() (+4 more)
+
+### Community 7 - "models.go"
+Cohesion: 0.14
+Nodes (19): CacheDir(), customSpec(), download(), ensureModel(), isModelPath(), Lookup(), ModelPath(), RegistryNames() (+11 more)
+
+### Community 10 - "Remover"
+Cohesion: 0.18
+Nodes (6): destroyTensors(), Remover, closeORT(), Device, newSessionOptions(), Options
+
+### Community 11 - "processFile"
+Cohesion: 0.36
+Nodes (7): parseFlags(), processDir(), processFile(), run(), ParseHexColor(), TestParseHexColor(), config
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `github.com/khofesh/misc-app`
-  These have ≤1 connection - possible missing edges. (Counts symbols only; 19 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges. (Counts symbols only; 30 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Spinner` connect `Spinner` to `spinner_test.go`?**
-  _High betweenness centrality (0.102) - this node is a cross-community bridge._
-- **Are the 6 inferred relationships involving `New()` (e.g. with `TestNewDefaults()` and `TestRestart()`) actually correct?**
-  _`New()` has 6 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `Remover` connect `Remover` to `postprocess_test.go`, `processFile`, `rmbg/main.go`, `models.go`?**
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
+- **Are the 4 inferred relationships involving `ModelPath()` (e.g. with `TestModelPathCustom()` and `TestModelPathMissingCustom()`) actually correct?**
+  _`ModelPath()` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/khofesh/misc-app` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `utc2local/main_test.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.14210526315789473 - nodes in this community are weakly interconnected._
-- **Why does `New()` connect `spinner_test.go` to `Spinner`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
-- **Are the 5 inferred relationships involving `HtmlToText()` (e.g. with `TestHtmlToText()` and `TestHtmlToTextEmpty()`) actually correct?**
-  _`HtmlToText()` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **Why does `HtmlToText()` connect `HtmlToText` to `html2text.go`, `go_pkg_os`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **Should `postprocess_test.go` be split into smaller, more focused modules?**
+  _Cohesion score 0.0859465737514518 - nodes in this community are weakly interconnected._
+- **Why does `New()` connect `rmbg/main.go` to `Remover`, `processFile`, `models.go`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+- **Should `testing.T` be split into smaller, more focused modules?**
+  _Cohesion score 0.12834224598930483 - nodes in this community are weakly interconnected._
+- **Should `rmbg/main.go` be split into smaller, more focused modules?**
+  _Cohesion score 0.08599290780141844 - nodes in this community are weakly interconnected._
