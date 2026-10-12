@@ -337,72 +337,6 @@
       "source_location": ""
     },
     {
-      "id": "cmd_html2md_main_test",
-      "label": "html2md/main_test.go",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "file_type": "code",
-      "norm_label": "html2md/main_test.go",
-      "source_file": "cmd/html2md/main_test.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "cmd_html2md_main_test_testmainconvertsfile",
-      "label": "TestMainConvertsFile()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "file_type": "code",
-      "norm_label": "testmainconvertsfile()",
-      "source_file": "cmd/html2md/main_test.go",
-      "source_location": "L10"
-    },
-    {
-      "id": "cmd_html2text_main",
-      "label": "html2text/main.go",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "file_type": "code",
-      "norm_label": "html2text/main.go",
-      "source_file": "cmd/html2text/main.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "cmd_html2text_main_main",
-      "label": "main()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "cmd/html2text/main.go",
-      "source_location": "L11"
-    },
-    {
-      "id": "cmd_html2text_main_test",
-      "label": "html2text/main_test.go",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "file_type": "code",
-      "norm_label": "html2text/main_test.go",
-      "source_file": "cmd/html2text/main_test.go",
-      "source_location": "L1"
-    },
-    {
-      "id": "cmd_html2text_main_test_testmainconvertsfile",
-      "label": "TestMainConvertsFile()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "file_type": "code",
-      "norm_label": "testmainconvertsfile()",
-      "source_file": "cmd/html2text/main_test.go",
-      "source_location": "L10"
-    },
-    {
       "id": "internal_htmltag_html2text_htmltotext",
       "label": "HtmlToText()",
       "_origin": "ast",
@@ -847,7 +781,7 @@
       "label": "html2md/main.go",
       "_origin": "ast",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "file_type": "code",
       "norm_label": "html2md/main.go",
       "source_file": "cmd/html2md/main.go",
@@ -858,18 +792,84 @@
       "label": "main()",
       "_origin": "ast",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "cmd/html2md/main.go",
       "source_location": "L11"
     },
     {
+      "id": "cmd_html2md_main_test",
+      "label": "html2md/main_test.go",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "file_type": "code",
+      "norm_label": "html2md/main_test.go",
+      "source_file": "cmd/html2md/main_test.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "cmd_html2md_main_test_testmainconvertsfile",
+      "label": "TestMainConvertsFile()",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "file_type": "code",
+      "norm_label": "testmainconvertsfile()",
+      "source_file": "cmd/html2md/main_test.go",
+      "source_location": "L10"
+    },
+    {
+      "id": "cmd_html2text_main",
+      "label": "html2text/main.go",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "file_type": "code",
+      "norm_label": "html2text/main.go",
+      "source_file": "cmd/html2text/main.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "cmd_html2text_main_main",
+      "label": "main()",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "cmd/html2text/main.go",
+      "source_location": "L11"
+    },
+    {
+      "id": "cmd_html2text_main_test",
+      "label": "html2text/main_test.go",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "file_type": "code",
+      "norm_label": "html2text/main_test.go",
+      "source_file": "cmd/html2text/main_test.go",
+      "source_location": "L1"
+    },
+    {
+      "id": "cmd_html2text_main_test_testmainconvertsfile",
+      "label": "TestMainConvertsFile()",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "file_type": "code",
+      "norm_label": "testmainconvertsfile()",
+      "source_file": "cmd/html2text/main_test.go",
+      "source_location": "L10"
+    },
+    {
       "id": "cmd_pdf_ocr_main",
       "label": "pdf-ocr/main.go",
       "_origin": "ast",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "file_type": "code",
       "norm_label": "pdf-ocr/main.go",
       "source_file": "cmd/pdf-ocr/main.go",
@@ -880,7 +880,7 @@
       "label": "main()",
       "_origin": "ast",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "cmd/pdf-ocr/main.go",
@@ -977,6 +977,28 @@
       "type": "package"
     },
     {
+      "id": "opencode_opencode",
+      "label": "opencode.json",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "opencode.json",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "opencode_opencode_schema",
+      "label": "$schema",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "opencode.json",
+      "file_type": "code",
+      "norm_label": "$schema",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2"
+    },
+    {
       "id": "go_pkg_flag",
       "label": "go_pkg_flag",
       "community": 0,
@@ -1017,17 +1039,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_net_url",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_os",
-      "label": "go_pkg_os",
-      "community": 0,
-      "community_name": "utc2local/main_test.go",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_os",
       "source_file": "",
       "type": "external"
     },
@@ -1098,39 +1109,6 @@
       "type": "external"
     },
     {
-      "id": "go_pkg_path_filepath",
-      "label": "go_pkg_path_filepath",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_path_filepath",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_strings",
-      "label": "go_pkg_strings",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_strings",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "go_pkg_testing",
-      "label": "go_pkg_testing",
-      "community": 2,
-      "community_name": "HtmlToText",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "go_pkg_testing",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "go_pkg_time",
       "label": "go_pkg_time",
       "community": 3,
@@ -1167,7 +1145,7 @@
       "id": "go_pkg_context",
       "label": "go_pkg_context",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_context",
@@ -1178,7 +1156,7 @@
       "id": "go_pkg_fmt",
       "label": "go_pkg_fmt",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_fmt",
@@ -1189,7 +1167,7 @@
       "id": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
       "label": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_github_com_johanneskaufmann_html_to_markdown",
@@ -1200,7 +1178,7 @@
       "id": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
       "label": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_github_com_pdfcpu_pdfcpu_pkg_api",
@@ -1211,7 +1189,7 @@
       "id": "go_pkg_log",
       "label": "go_pkg_log",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_log",
@@ -1219,13 +1197,57 @@
       "type": "external"
     },
     {
+      "id": "go_pkg_os",
+      "label": "go_pkg_os",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_os",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "go_pkg_os_exec",
       "label": "go_pkg_os_exec",
       "community": 6,
-      "community_name": "pdf-ocr/main.go",
+      "community_name": "go_pkg_os",
       "external": true,
       "file_type": "concept",
       "norm_label": "go_pkg_os_exec",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_path_filepath",
+      "label": "go_pkg_path_filepath",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_path_filepath",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_strings",
+      "label": "go_pkg_strings",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_strings",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "go_pkg_testing",
+      "label": "go_pkg_testing",
+      "community": 6,
+      "community_name": "go_pkg_os",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "go_pkg_testing",
       "source_file": "",
       "type": "external"
     }
@@ -3742,6 +3764,17 @@
       "weight": 1.0
     },
     {
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_schema",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "spinner_spinner",
       "target": "spinner_spinner_setmessage",
       "relation": "method",
@@ -4038,5 +4071,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ae3cebc2a55852d54283b6c2085ebbf08f6c634d"
+  "built_at_commit": "0a28850c0b3621b7f8bfb3ec147617ad6afbeca5"
 }
