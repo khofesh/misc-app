@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -28,7 +29,7 @@ func main() {
 	}
 
 	// extract pdf to images
-	err = api.ExtractImagesFile(fullpath, imageDir, nil, nil)
+	err = api.ExtractImagesFile(context.Background(), fullpath, imageDir, nil, nil)
 	if err != nil {
 		log.Fatalf("Failed to extract images: %v", err)
 	}
