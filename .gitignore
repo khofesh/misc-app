@@ -27,6 +27,9 @@ go.work.sum
 # bin folder
 bin
 
+# ONNX Runtime shared library (make ort/cpu, make ort/gpu)
+lib/
+
 ###
 build/*
 
