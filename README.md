@@ -59,30 +59,48 @@ This unpacks `libonnxruntime.so` into `./lib`, next to the binary. If you
 install it elsewhere, point the tool at it with `-ort-lib` or the
 `ONNXRUNTIME_LIB` environment variable.
 
-### NVIDIA install (Fedora)
+### NVIDIA install (Fedora 44)
 
-1. Install the NVIDIA driver and CUDA 12 from the CUDA repo:
+ONNX Runtime 1.31 GPU builds target CUDA 13.x (CUDA 13.0 or newer, so the
+CUDA 13.4 toolkit works) and require cuDNN 9.
+
+1. Install the NVIDIA driver, then the CUDA 13.4 toolkit from the Fedora 44
+   CUDA repo:
 
    ```shell
    sudo dnf install -y dnf-plugins-core
-   sudo dnf config-manager addrepo --from-repofile=https://developer.download.nvidia.com/compute/cuda/repos/fedora39/x86_64/cuda-fedora39.repo
-   sudo dnf install -y cuda-toolkit-12-8
+   sudo dnf config-manager addrepo \
+     --from-repofile=https://developer.download.nvidia.com/compute/cuda/repos/fedora44/x86_64/cuda-fedora44.repo
+   sudo dnf install -y cuda-toolkit-13-4
    ```
 
-2. Install cuDNN 9 for CUDA 12 and make sure its libraries are on
-   `LD_LIBRARY_PATH`.
-
-3. Download the GPU build of ONNX Runtime:
+   Add CUDA to your environment:
 
    ```shell
-   make ort/gpu
+   export PATH=/usr/local/cuda/bin:$PATH
+   export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+   ```
+
+2. Install cuDNN 9 for CUDA 13 (not shipped in the CUDA repo). Download the
+   archive and put its libraries on `LD_LIBRARY_PATH`:
+
+   ```shell
+   curl -fLO https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.27.0.42_cuda13-archive.tar.xz
+   sudo tar -xJf cudnn-linux-x86_64-9.27.0.42_cuda13-archive.tar.xz -C /usr/local
+   export LD_LIBRARY_PATH=/usr/local/cudnn-linux-x86_64-9.27.0.42_cuda13/lib:$LD_LIBRARY_PATH
+   ```
+
+3. Download the CUDA 13 build of ONNX Runtime:
+
+   ```shell
+   make ort/gpu              # ORT_CUDA=cuda13 by default; ORT_CUDA=cuda12 for CUDA 12.8
    ```
 
 4. Run with `-device cuda` (or `-device auto`). The CUDA and cuDNN libraries
    must be on `LD_LIBRARY_PATH`, and ONNX Runtime's `libonnxruntime_providers_*`
    files sit next to `libonnxruntime.so` in `./lib`.
 
-The CUDA/cuDNN versions must match the ONNX Runtime release pinned in the
-Makefile (`ORT_VERSION`). `-device auto` falls back to CPU with a warning when
-CUDA is unavailable; `-device cuda` fails with exit code 2 instead.
+The CUDA, cuDNN, and ONNX Runtime versions must match the release pinned in the
+Makefile (`ORT_VERSION`, `ORT_CUDA`). `-device auto` falls back to CPU with a
+warning when CUDA is unavailable; `-device cuda` fails with exit code 2 instead.
 

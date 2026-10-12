@@ -98,8 +98,12 @@ build/utc2local:
 	go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/utc2local ./cmd/utc2local
 	GOOS=linux go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/linux/utc2local ./cmd/utc2local
 
-# ONNX Runtime version that the pinned onnxruntime_go release supports.
-ORT_VERSION ?= 1.29.0
+# ONNX Runtime version. Must match the C API version the pinned
+# onnxruntime_go release supports (it is built against ORT 1.29 headers, and
+# ORT keeps the older C API available in newer releases).
+ORT_VERSION ?= 1.31.0
+# GPU build flavour: cuda13 (CUDA 13.x + cuDNN 9) or cuda12 (CUDA 12.8 + cuDNN 9).
+ORT_CUDA ?= cuda13
 
 ## build/rmbg: build the cmd/rmbg application (requires ./lib/libonnxruntime.so at runtime)
 .PHONY: build/rmbg
@@ -113,11 +117,11 @@ ort/cpu:
 	@mkdir -p lib
 	curl -fsSL https://github.com/microsoft/onnxruntime/releases/download/v$(ORT_VERSION)/onnxruntime-linux-x64-$(ORT_VERSION).tgz | tar -xz -C lib --strip-components=2
 
-## ort/gpu: download the ONNX Runtime CUDA 12 build into ./lib
+## ort/gpu: download the ONNX Runtime GPU build (ORT_CUDA=cuda13|cuda12) into ./lib
 .PHONY: ort/gpu
 ort/gpu:
 	@mkdir -p lib
-	curl -fsSL https://github.com/microsoft/onnxruntime/releases/download/v$(ORT_VERSION)/onnxruntime-linux-x64-gpu_cuda12-$(ORT_VERSION).tgz | tar -xz -C lib --strip-components=2
+	curl -fsSL https://github.com/microsoft/onnxruntime/releases/download/v$(ORT_VERSION)/onnxruntime-linux-x64-gpu_$(ORT_CUDA)-$(ORT_VERSION).tgz | tar -xz -C lib --strip-components=2
 
 # ==================================================================================== #
 # QUALITY CONTROL
