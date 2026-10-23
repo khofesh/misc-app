@@ -1,0 +1,21 @@
+%%MediaBox 0 0 612 792
+%%Font H Helvetica
+%%Font HB Helvetica-Bold
+%%Font HI Helvetica-Oblique
+BT /H 9 Tf 72 760 Td (Sample Report) Tj ET
+BT /HB 24 Tf 72 700 Td (Quarterly Report) Tj ET
+BT /H 11 Tf 72 670 Td (This report covers the results of the third quarter. Revenue grew in every) Tj ET
+BT /H 11 Tf 72 656 Td (region, and the team shipped two new products. The details are in the sec-) Tj ET
+BT /H 11 Tf 72 642 Td (tions below.) Tj ET
+BT /HB 16 Tf 72 610 Td (Highlights) Tj ET
+BT /H 11 Tf 72 585 Td (\225 Revenue grew by twelve percent) Tj ET
+BT /H 11 Tf 72 571 Td (\225 Two products shipped on time, with a long description that wraps onto) Tj ET
+BT /H 11 Tf 82 557 Td (the next line of the item) Tj ET
+BT /H 11 Tf 72 543 Td (\225 Costs stayed flat) Tj ET
+BT /HB 11 Tf 72 515 Td (Next steps) Tj ET
+BT /H 11 Tf 72 495 Td (1. Hire two engineers) Tj ET
+BT /H 11 Tf 72 481 Td (2. Open the Berlin office) Tj ET
+BT /H 11 Tf 72 455 Td (The plan is ) Tj /HB 11 Tf (ambitious) Tj /H 11 Tf ( but ) Tj /HI 11 Tf (realistic) Tj /H 11 Tf (, and the budget for it was) Tj ET
+BT /H 11 Tf 72 441 Td (approved by the board in the last meeting of the quarter, which means the) Tj ET
+BT /H 11 Tf 72 427 Td (work can start right away and the first results should be visible) Tj ET
+BT /H 9 Tf 300 40 Td (1) Tj ET

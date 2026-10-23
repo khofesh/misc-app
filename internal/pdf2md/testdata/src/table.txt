@@ -1,0 +1,18 @@
+%%MediaBox 0 0 612 792
+%%Font H Helvetica
+%%Font HB Helvetica-Bold
+BT /HB 18 Tf 72 720 Td (Prices) Tj ET
+BT /H 11 Tf 72 690 Td (The table lists the current prices.) Tj ET
+BT /HB 11 Tf 72 660 Td (Item) Tj ET
+BT /HB 11 Tf 220 660 Td (Unit) Tj ET
+BT /HB 11 Tf 380 660 Td (Price) Tj ET
+BT /H 11 Tf 72 644 Td (Coffee beans) Tj ET
+BT /H 11 Tf 220 644 Td (kg) Tj ET
+BT /H 11 Tf 380 644 Td (24.50) Tj ET
+BT /H 11 Tf 72 628 Td (Milk) Tj ET
+BT /H 11 Tf 220 628 Td (liter) Tj ET
+BT /H 11 Tf 380 628 Td (1.20) Tj ET
+BT /H 11 Tf 72 612 Td (Sugar | cane) Tj ET
+BT /H 11 Tf 220 612 Td (kg) Tj ET
+BT /H 11 Tf 380 612 Td (2.10) Tj ET
+BT /H 11 Tf 72 580 Td (Prices include tax.) Tj ET

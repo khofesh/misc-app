@@ -28,6 +28,32 @@ sudo dnf install tesseract
 
 convert html `input/input.html` to markdown `output/html2text-result.txt`
 
+## pdf2md
+
+Convert PDF documents to Markdown. Keeps headings, paragraphs, lists, bold and
+italic text, links, code blocks and simple tables, reads multi-column pages in
+column order, and drops repeated page headers and footers. Scanned pages go
+through OCR.
+
+```shell
+sudo dnf install mupdf tesseract tesseract-langpack-ind   # mupdf recommended, tesseract for OCR
+
+make install                      # build and install into ~/.local/bin
+
+pdf2md -i report.pdf                          # Markdown to stdout
+pdf2md -i report.pdf -o report.md
+pdf2md -i pdfs/ -o mds/                       # whole directory
+pdf2md -i book.pdf -o book.md -pages 1-5,9 -images
+pdf2md -i scan.pdf -o scan.md -ocr always -lang ind+eng
+```
+
+`~/.local/bin` must be on `PATH` (it is by default on Fedora). Use
+`make install BINDIR=/some/dir` to install elsewhere, and
+`make uninstall/pdf2md` to remove it.
+
+Text is extracted with MuPDF's `mutool`. Without it, a pure Go backend is used
+(`-backend native`), which handles fewer PDFs. Run `pdf2md -h` for all flags.
+
 ## rmbg
 
 Remove the background from images with a local ONNX segmentation model. Runs

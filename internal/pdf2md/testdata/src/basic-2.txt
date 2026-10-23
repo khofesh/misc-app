@@ -1,0 +1,8 @@
+%%MediaBox 0 0 612 792
+%%Font H Helvetica
+%%Font HB Helvetica-Bold
+BT /H 9 Tf 72 760 Td (Sample Report) Tj ET
+BT /H 11 Tf 72 700 Td (before the end of the year. Progress is reviewed every month.) Tj ET
+BT /HB 16 Tf 72 670 Td (Risks) Tj ET
+BT /H 11 Tf 72 645 Td (Hiring could take longer than planned. Prices for cloud services may rise.) Tj ET
+BT /H 9 Tf 300 40 Td (2) Tj ET

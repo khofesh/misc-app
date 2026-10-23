@@ -88,6 +88,7 @@ internal/pdf2md/
   ocr.go                  page render + tesseract fallback
   images.go               embedded image extraction (pdfcpu)
   render.go               blocks → Markdown
+  meta.go                 pdfcpu metadata: links, outline, title/author
   convert.go              Converter type tying everything together
 ```
 
@@ -103,7 +104,7 @@ const (
 )
 
 type Options struct {
-    Pages       []int // empty means all
+    Pages       string // selection like "1-3,7,10-"; empty means all
     Password    string
     Backend     Backend // "auto", "mutool", "native"
     MutoolPath  string
@@ -118,6 +119,7 @@ type Options struct {
 }
 
 type Extractor interface {
+    PageCount(ctx context.Context, path string) (int, error)
     Extract(ctx context.Context, path string, pages []int) ([]Page, error)
 }
 
@@ -173,10 +175,11 @@ startup with `-v`.
 Run MuPDF's structured text output, one process per page chunk (§9):
 
 ```shell
-mutool draw -q -F stext -o - [-p <password>] file.pdf <pages>
+mutool draw [-p <password>] -q -F stext -O preserve-images -o - file.pdf <pages>
 ```
 
-`<pages>` uses mutool's own syntax (`1-3,7,10-N`), built from `-pages`. The
+`<pages>` uses mutool's own syntax (`1-3,7,10-N`), built from `-pages`.
+The page count comes from `mutool pages`. The
 default options expand ligatures and normalize whitespace, which covers most
 of the Unicode cleanup in §5.6.
 
@@ -193,7 +196,7 @@ Output shape:
       </font>
     </line>
   </block>
-  <block type="image" bbox="..."/>
+  <image bbox="..."/>
 </page>
 </document>
 ```
@@ -214,7 +217,8 @@ Mapping to the model (§3):
   Subset prefixes like `ABCDEF+` are stripped first.
 - Lines with `dir` other than `1 0` (rotated text, e.g. margin labels) are
   dropped.
-- `<block type="image">` bboxes are kept as `ImageRef` positions for §7 and
+- `<image>` bboxes (emitted because of `-O preserve-images`, without the
+  image data) are kept as `ImageRef` positions for §7 and
   for the OCR decision in §6.
 - A page whose stext has no chars is marked empty for §6.
 - A non-zero exit from `mutool` fails only the chunk's pages; stderr is
@@ -334,6 +338,11 @@ ignored in v1.
 - Images smaller than 32×32 px or under 1 KB are skipped (decorations).
 - Insert `![](<name>_images/p3_1.png)` at the image's position in the reading
   order. A caption block directly below becomes the alt text.
+- pdfcpu does not report where an image is drawn, so extracted files (sorted
+  by object number) are matched in order to the `<image>` positions from
+  `mutool` that are at least 24 pt in both directions. Files without a
+  position, and all images with the `native` backend, go to the end of the
+  page.
 - With stdout output, `-images` is an error (exit 1).
 
 ## 8. Rendering
