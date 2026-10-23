@@ -1,0 +1,9 @@
+%%MediaBox 0 0 612 792
+%%Font H Helvetica
+%%Font C Courier
+BT /H 11 Tf 72 720 Td (The program prints a greeting:) Tj ET
+BT /C 10 Tf 72 696 Td (func main\(\) {) Tj ET
+BT /C 10 Tf 72 684 Td (    msg := "hello") Tj ET
+BT /C 10 Tf 72 672 Td (    fmt.Println\(msg\)) Tj ET
+BT /C 10 Tf 72 660 Td (}) Tj ET
+BT /H 11 Tf 72 636 Td (Run it with go run.) Tj ET

@@ -56,6 +56,11 @@ run/rmbg:
 	ONNXRUNTIME_LIB=$(CURDIR)/lib/libonnxruntime.so \
 	go run ./cmd/rmbg -i input/sample.png -o output/sample.png -v
 
+## run/pdf2md: run pdf2md on a sample pdf
+.PHONY: run/pdf2md
+run/pdf2md:
+	go run ./cmd/pdf2md -i input/sample.pdf -o output/sample.md -v
+
 # ==================================================================================== #
 # BUILD DEBUG
 # ==================================================================================== #
@@ -96,6 +101,12 @@ build/debug/rmbg:
 	@echo 'Building cmd/rmbg...'
 	CGO_ENABLED=1 go build -gcflags=all="-N -l" -o=./bin/rmbg-debug ./cmd/rmbg
 
+## build/debug/pdf2md: build the cmd/pdf2md application with debugging flags enabled
+.PHONY: build/debug/pdf2md
+build/debug/pdf2md:
+	@echo 'Building cmd/pdf2md...'
+	go build -gcflags=all="-N -l" -o=./bin/pdf2md-debug ./cmd/pdf2md
+
 # ==================================================================================== #
 # BUILD 
 # ==================================================================================== #
@@ -119,6 +130,32 @@ ORT_CUDA ?= cuda13
 build/rmbg:
 	@echo 'Building cmd/rmbg...'
 	CGO_ENABLED=1 go build -ldflags="-s -w" -o=./bin/rmbg ./cmd/rmbg
+
+## build/pdf2md: build the cmd/pdf2md application
+.PHONY: build/pdf2md
+build/pdf2md:
+	@echo 'Building cmd/pdf2md...'
+	CGO_ENABLED=0 go build -ldflags="-s -w" -o=./bin/pdf2md ./cmd/pdf2md
+
+# ==================================================================================== #
+# INSTALL
+# ==================================================================================== #
+
+BINDIR ?= $(HOME)/.local/bin
+
+## install/pdf2md: build pdf2md and install it into $(BINDIR)
+.PHONY: install/pdf2md
+install/pdf2md: build/pdf2md
+	install -Dm755 ./bin/pdf2md $(BINDIR)/pdf2md
+
+## uninstall/pdf2md: remove pdf2md from $(BINDIR)
+.PHONY: uninstall/pdf2md
+uninstall/pdf2md:
+	rm -f $(BINDIR)/pdf2md
+
+## install: install all installable tools into $(BINDIR)
+.PHONY: install
+install: install/pdf2md
 
 ## ort/cpu: download the ONNX Runtime CPU build into ./lib
 .PHONY: ort/cpu

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<document filename="styles.pdf">
+<page id="page3" width="612" height="792">
+<image bbox="72 400 272 600" />
+<block bbox="72 74 300 92" justify="unknown">
+<line bbox="72 74 300 92" wmode="0" dir="1 0" flags="0" text="Hi Bold">
+<font name="ABCDEF+Helvetica" size="10">
+<char c="H" quad="72 82 78 82 72 92 78 92" x="72" y="90" flags="16"/>
+<char c="i" quad="78 82 81 82 78 92 81 92" x="78" y="90" flags="16"/>
+<char c=" " quad="81 90 84 90 81 90 84 90" x="81" y="90" flags="16"/>
+</font>
+<font name="Helvetica" size="10">
+<char c="B" quad="84 82 90 82 84 92 90 92" x="84" y="90" flags="24"/>
+<char c="o" quad="90 84 96 84 90 92 96 92" x="90" y="90" flags="24"/>
+</font>
+<font name="Times-Italic" size="10">
+<char c="f" quad="140 82 144 82 140 92 144 92" x="140" y="90" flags="16"/>
+</font>
+</line>
+</block>
+<block bbox="72 100 300 120" justify="unknown">
+<line bbox="72 100 82 200" wmode="0" dir="0 -1" flags="0" text="up">
+<font name="Helvetica" size="10">
+<char c="u" quad="72 110 82 110 72 100 82 100" x="72" y="110" flags="16"/>
+<char c="p" quad="72 100 82 100 72 90 82 90" x="72" y="100" flags="16"/>
+</font>
+</line>
+<line bbox="72 120 100 130" wmode="0" dir="1 0" flags="0" text="code">
+<font name="CourierNewPSMT" size="9">
+<char c="x" quad="72 122 78 122 72 130 78 130" x="72" y="129" flags="16"/>
+</font>
+</line>
+</block>
+</page>
+<page id="page4" width="300" height="400">
+</page>
+</document>

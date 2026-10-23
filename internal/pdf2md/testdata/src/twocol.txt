@@ -1,0 +1,20 @@
+%%MediaBox 0 0 612 792
+%%Font H Times-Roman
+%%Font HB Times-Bold
+BT /HB 20 Tf 72 720 Td (A Study of Two Columns) Tj ET
+BT /H 10 Tf 72 690 Td (Left column starts here and the text keeps) Tj ET
+BT /H 10 Tf 72 678 Td (going for a few lines so that the layout) Tj ET
+BT /H 10 Tf 72 666 Td (looks like a real paper with columns that) Tj ET
+BT /H 10 Tf 72 654 Td (are read from top to bottom first.) Tj ET
+BT /H 10 Tf 72 636 Td (A second paragraph in the left column) Tj ET
+BT /H 10 Tf 72 624 Td (adds more lines so that the column is tall) Tj ET
+BT /H 10 Tf 72 612 Td (enough to be found by the gutter check and) Tj ET
+BT /H 10 Tf 72 600 Td (ends the left column.) Tj ET
+BT /H 10 Tf 320 690 Td (Right column text begins at the top and) Tj ET
+BT /H 10 Tf 320 678 Td (must be read only after the left column is) Tj ET
+BT /H 10 Tf 320 666 Td (finished, never interleaved with it line by) Tj ET
+BT /H 10 Tf 320 654 Td (line as a naive extractor would do it.) Tj ET
+BT /H 10 Tf 320 636 Td (The last paragraph of the right column is) Tj ET
+BT /H 10 Tf 320 624 Td (short but still spans a few lines to keep) Tj ET
+BT /H 10 Tf 320 612 Td (the two columns about the same height on) Tj ET
+BT /H 10 Tf 320 600 Td (the page.) Tj ET
