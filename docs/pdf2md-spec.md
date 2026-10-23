@@ -1,6 +1,6 @@
 # pdf2md — PDF to Markdown CLI (Spec)
 
-Status: Draft
+Status: Approved
 Location: `cmd/pdf2md`, `internal/pdf2md`
 
 ## 1. Goal
@@ -46,33 +46,33 @@ pdf2md -i input/scan.pdf -o output/scan.md -ocr always -lang ind+eng
 
 ### Flags
 
-| Flag | Default | Description |
-|---|---|---|
-| `-i` | (required) | Input `.pdf` file or directory |
-| `-o` | (empty) | Output `.md` file or directory. Empty means stdout (single-file mode only). Directories are created if missing |
-| `-pages` | (all) | Page selection, e.g. `1-3,7,10-`. 1-based |
-| `-password` | (empty) | User password for encrypted PDFs |
-| `-backend` | `auto` | `auto`, `mutool`, or `native` (see §4) |
-| `-mutool` | (`PATH`) | Path to the `mutool` binary |
-| `-ocr` | `auto` | `auto`, `never`, or `always` (see §6) |
-| `-lang` | `eng` | Tesseract language(s), passed as `-l` |
-| `-images` | `false` | Extract embedded images into `<name>_images/` and link them |
-| `-page-breaks` | `false` | Insert `<!-- page N -->` comments between pages |
-| `-keep-headers` | `false` | Keep repeated page headers and footers (removed by default, §5.6) |
-| `-tables` | `true` | Detect simple tables and emit GFM tables |
-| `-front-matter` | `false` | Write a YAML front matter block with title, author, page count, and source file |
-| `-workers` | `runtime.NumCPU()` | Pages processed in parallel |
-| `-overwrite` | `false` | Overwrite existing output files |
-| `-v` | `false` | Verbose logging (per-page timing, OCR decisions, detected body font size) |
+| Flag            | Default            | Description                                                                                                    |
+| --------------- | ------------------ | -------------------------------------------------------------------------------------------------------------- |
+| `-i`            | (required)         | Input `.pdf` file or directory                                                                                 |
+| `-o`            | (empty)            | Output `.md` file or directory. Empty means stdout (single-file mode only). Directories are created if missing |
+| `-pages`        | (all)              | Page selection, e.g. `1-3,7,10-`. 1-based                                                                      |
+| `-password`     | (empty)            | User password for encrypted PDFs                                                                               |
+| `-backend`      | `auto`             | `auto`, `mutool`, or `native` (see §4)                                                                         |
+| `-mutool`       | (`PATH`)           | Path to the `mutool` binary                                                                                    |
+| `-ocr`          | `auto`             | `auto`, `never`, or `always` (see §6)                                                                          |
+| `-lang`         | `eng`              | Tesseract language(s), passed as `-l`                                                                          |
+| `-images`       | `false`            | Extract embedded images into `<name>_images/` and link them                                                    |
+| `-page-breaks`  | `false`            | Insert `<!-- page N -->` comments between pages                                                                |
+| `-keep-headers` | `false`            | Keep repeated page headers and footers (removed by default, §5.6)                                              |
+| `-tables`       | `true`             | Detect simple tables and emit GFM tables                                                                       |
+| `-front-matter` | `false`            | Write a YAML front matter block with title, author, page count, and source file                                |
+| `-workers`      | `runtime.NumCPU()` | Pages processed in parallel                                                                                    |
+| `-overwrite`    | `false`            | Overwrite existing output files                                                                                |
+| `-v`            | `false`            | Verbose logging (per-page timing, OCR decisions, detected body font size)                                      |
 
 ### Exit codes
 
-| Code | Meaning |
-|---|---|
-| 0 | All files converted |
-| 1 | Invalid flags or input |
-| 2 | A required external tool is missing (e.g. `-ocr always` without `tesseract`), or `-backend mutool` without `mutool` |
-| 3 | Some files in directory mode failed (others succeeded) |
+| Code | Meaning                                                                                                             |
+| ---- | ------------------------------------------------------------------------------------------------------------------- |
+| 0    | All files converted                                                                                                 |
+| 1    | Invalid flags or input                                                                                              |
+| 2    | A required external tool is missing (e.g. `-ocr always` without `tesseract`), or `-backend mutool` without `mutool` |
+| 3    | Some files in directory mode failed (others succeeded)                                                              |
 
 ## 3. Architecture
 
@@ -158,11 +158,11 @@ without real PDFs.
 
 ### 4.1 Backend selection
 
-| `-backend` | Behavior |
-|---|---|
-| `mutool` | Use `mutool`. Exit 2 if it isn't found |
-| `native` | Use `ledongthuc/pdf` (pure Go). For machines without MuPDF |
-| `auto` | Use `mutool` if found, else log a warning once and use `native` |
+| `-backend` | Behavior                                                        |
+| ---------- | --------------------------------------------------------------- |
+| `mutool`   | Use `mutool`. Exit 2 if it isn't found                          |
+| `native`   | Use `ledongthuc/pdf` (pure Go). For machines without MuPDF      |
+| `auto`     | Use `mutool` if found, else log a warning once and use `native` |
 
 `mutool` is looked up in this order: `-mutool` flag, `MUTOOL` environment
 variable, `PATH`. The chosen backend and the `mutool -v` version are logged at
@@ -274,13 +274,13 @@ line of a paragraph).
 The **body font size** is the most common font size by character count across
 the document (not per page).
 
-| Kind | Rule |
-|---|---|
-| Heading | Font size ≥ 1.15× body size, or bold and on its own short line (≤ 12 words, no final period). Levels are assigned by clustering distinct heading sizes: largest → `#`, next → `##`, up to `######`. The PDF outline (bookmarks), if present, overrides this: block text that matches an outline entry gets that entry's depth |
-| List item | First span matches a bullet (`•`, `◦`, `▪`, `–`, `-`, `*`, `·`) or `^\(?\d+[.)]`, `^[a-z][.)]`. Nesting level from left indent |
-| Code | All spans monospace. Rendered as a fenced block, keeping indentation from X offsets |
-| Caption | Starts with `Figure`, `Fig.`, `Table` + number, smaller than body size. Rendered as italic paragraph |
-| Paragraph | Everything else |
+| Kind      | Rule                                                                                                                                                                                                                                                                                                                          |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Heading   | Font size ≥ 1.15× body size, or bold and on its own short line (≤ 12 words, no final period). Levels are assigned by clustering distinct heading sizes: largest → `#`, next → `##`, up to `######`. The PDF outline (bookmarks), if present, overrides this: block text that matches an outline entry gets that entry's depth |
+| List item | First span matches a bullet (`•`, `◦`, `▪`, `–`, `-`, `*`, `·`) or `^\(?\d+[.)]`, `^[a-z][.)]`. Nesting level from left indent                                                                                                                                                                                                |
+| Code      | All spans monospace. Rendered as a fenced block, keeping indentation from X offsets                                                                                                                                                                                                                                           |
+| Caption   | Starts with `Figure`, `Fig.`, `Table` + number, smaller than body size. Rendered as italic paragraph                                                                                                                                                                                                                          |
+| Paragraph | Everything else                                                                                                                                                                                                                                                                                                               |
 
 ### 5.5 Tables (`-tables`)
 
@@ -309,11 +309,11 @@ ignored in v1.
 
 ## 6. OCR
 
-| `-ocr` | Behavior |
-|---|---|
-| `never` | Never OCR. Pages without text produce a warning and a placeholder comment |
-| `always` | OCR every selected page, ignoring the text layer |
-| `auto` | OCR a page when it has fewer than 20 extracted characters and contains at least one image covering ≥ 50% of the page |
+| `-ocr`   | Behavior                                                                                                             |
+| -------- | -------------------------------------------------------------------------------------------------------------------- |
+| `never`  | Never OCR. Pages without text produce a warning and a placeholder comment                                            |
+| `always` | OCR every selected page, ignoring the text layer                                                                     |
+| `auto`   | OCR a page when it has fewer than 20 extracted characters and contains at least one image covering ≥ 50% of the page |
 
 - Render the page to PNG at 300 DPI with
   `mutool draw -q -r 300 -o <tmp>/p%d.png file.pdf N`. Without `mutool`
@@ -412,7 +412,33 @@ build/debug/pdf2md:
 .PHONY: build/pdf2md
 build/pdf2md:
 	CGO_ENABLED=0 go build -ldflags="-s -w" -o=./bin/pdf2md ./cmd/pdf2md
+
+BINDIR ?= $(HOME)/.local/bin
+
+## install/pdf2md: build pdf2md and install it into $(BINDIR)
+.PHONY: install/pdf2md
+install/pdf2md: build/pdf2md
+	install -Dm755 ./bin/pdf2md $(BINDIR)/pdf2md
+
+## uninstall/pdf2md: remove pdf2md from $(BINDIR)
+.PHONY: uninstall/pdf2md
+uninstall/pdf2md:
+	rm -f $(BINDIR)/pdf2md
+
+## install: install all installable tools into $(BINDIR)
+.PHONY: install
+install: install/pdf2md
 ```
+
+- `make install` installs into `~/.local/bin/` by default. Override with
+  `make install BINDIR=/some/dir`.
+- `install -D` creates `BINDIR` if it doesn't exist. No `sudo` is needed.
+- `~/.local/bin` must be on `PATH`; the README notes this (it is by default
+  on Fedora).
+- `install` is a repo-wide target. Other tools can be added later as more
+  `install/<tool>` prerequisites.
+- `pdf2md` reads `-i` and `-o` relative to the current directory, not the
+  repo root, so the installed binary works from anywhere.
 
 A `pdf2md` section is added to README.md.
 
@@ -457,6 +483,8 @@ A `pdf2md` section is added to README.md.
 8. The binary builds with `CGO_ENABLED=0` and passes `make audit`.
 9. Without `mutool`, `-backend auto` warns and converts with `native`;
    `-backend mutool` exits 2 with a message naming the missing tool.
+10. `make install` puts `pdf2md` in `~/.local/bin/`, and running `pdf2md -i x.pdf`
+    from any directory works. `make uninstall/pdf2md` removes it.
 
 ## 14. Future work
 
