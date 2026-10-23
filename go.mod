@@ -1,11 +1,11 @@
 module github.com/khofesh/misc-app
 
-go 1.26.0
+go 1.27.0
 
 require (
 	github.com/JohannesKaufmann/html-to-markdown v1.6.0
 	github.com/PuerkitoBio/goquery v1.13.0
-	github.com/pdfcpu/pdfcpu v0.16.2
+	github.com/pdfcpu/pdfcpu v0.16.3
 	github.com/rs/zerolog v1.35.1
 	github.com/yalue/onnxruntime_go v1.36.0
 	golang.org/x/image v0.47.0
