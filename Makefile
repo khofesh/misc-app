@@ -115,8 +115,8 @@ build/debug/pdf2md:
 .PHONY: build/utc2local
 build/utc2local:
 	@echo 'Building cmd/utc2local...'
-	go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/utc2local ./cmd/utc2local
-	GOOS=linux go build -ldflags="-s -w" -gcflags=all=-l -o=./bin/linux/utc2local ./cmd/utc2local
+	go build -ldflags="-w" -gcflags=all=-l -o=./bin/utc2local ./cmd/utc2local
+	GOOS=linux go build -ldflags="-w" -gcflags=all=-l -o=./bin/linux/utc2local ./cmd/utc2local
 
 # ONNX Runtime version. Must match the C API version the pinned
 # onnxruntime_go release supports (it is built against ORT 1.29 headers, and
@@ -129,13 +129,13 @@ ORT_CUDA ?= cuda13
 .PHONY: build/rmbg
 build/rmbg:
 	@echo 'Building cmd/rmbg...'
-	CGO_ENABLED=1 go build -ldflags="-s -w" -o=./bin/rmbg ./cmd/rmbg
+	CGO_ENABLED=1 go build -ldflags="-w" -o=./bin/rmbg ./cmd/rmbg
 
 ## build/pdf2md: build the cmd/pdf2md application
 .PHONY: build/pdf2md
 build/pdf2md:
 	@echo 'Building cmd/pdf2md...'
-	CGO_ENABLED=0 go build -ldflags="-s -w" -o=./bin/pdf2md ./cmd/pdf2md
+	CGO_ENABLED=0 go build -ldflags="-w" -o=./bin/pdf2md ./cmd/pdf2md
 
 # ==================================================================================== #
 # INSTALL

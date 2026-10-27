@@ -8,7 +8,7 @@ require (
 	github.com/ledongthuc/pdf v0.0.0-20261020125853-5e46805f718e
 	github.com/pdfcpu/pdfcpu v0.16.3
 	github.com/rs/zerolog v1.35.1
-	github.com/yalue/onnxruntime_go v1.36.0
+	github.com/yalue/onnxruntime_go v1.38.0
 	golang.org/x/image v0.47.0
 	golang.org/x/text v0.43.0
 )
